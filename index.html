@@ -183,6 +183,19 @@ select:disabled{opacity:.38;cursor:not-allowed;background:#eee}
 .dex-btn{padding:.65rem;border:1px solid var(--border);border-radius:var(--rs);background:var(--cream);cursor:pointer;font-family:var(--fb);font-size:.82rem;font-weight:600;text-align:center;transition:all .18s;color:var(--dark);text-transform:uppercase;letter-spacing:.03em}
 .dex-btn:hover{border-color:var(--cyan);background:var(--cyan-pale)}
 .dex-btn.sel{background:var(--navy);color:#fff;border-color:var(--navy)}
+.vtype-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.5rem}
+.vtype-btn{padding:.75rem;border:1.5px solid var(--border);border-radius:var(--rs);background:var(--cream);cursor:pointer;font-family:var(--fb);font-size:.84rem;font-weight:600;text-align:left;transition:all .18s;color:var(--dark);line-height:1.4;display:flex;flex-direction:column;gap:3px}
+.vtype-btn small{font-size:.72rem;font-weight:400;color:var(--muted);line-height:1.4}
+.vtype-btn:hover{border-color:var(--cyan);background:var(--cyan-pale)}
+.vtype-btn.sel{border-color:var(--navy);background:var(--navy);color:#fff}
+.vtype-btn.sel small{color:rgba(255,255,255,.6)}
+.tradein-box{background:var(--gold-pale);border:1px solid rgba(212,168,67,.3);border-radius:var(--rs);padding:.85rem 1rem;margin-top:.9rem;display:none}
+.tradein-box.show{display:block}
+.ti-label{font-size:.7rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem}
+.ti-range{font-family:var(--fd);font-size:1.6rem;font-weight:700;color:#7A5800;margin-bottom:.2rem}
+.ti-note{font-size:.78rem;color:#8B6010;line-height:1.6}
+.ti-cta{display:inline-flex;align-items:center;gap:5px;background:var(--navy);color:#fff;padding:.45rem .9rem;border-radius:var(--rs);font-family:var(--fd);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;transition:background .2s;margin-top:.65rem;cursor:pointer}
+.ti-cta:hover{background:var(--navy-mid)}
 .cb{padding:.6rem .3rem;border:1px solid var(--border);border-radius:var(--rs);background:var(--cream);cursor:pointer;font-family:var(--fb);font-size:.76rem;font-weight:600;text-align:center;transition:all .18s;color:var(--dark);line-height:1.4;text-transform:uppercase;letter-spacing:.02em}
 .cb small{display:block;font-size:.65rem;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0;margin-top:2px}
 .cb:hover{border-color:var(--cyan);background:var(--cyan-pale)}
@@ -572,6 +585,21 @@ footer a:hover{color:rgba(255,255,255,.75)}
         </div>
       </div>
       <div class="err-box" id="errBox">Please select a brand, type, model, year and condition before calculating.</div>
+
+      <div style="margin-top:1.25rem;padding-top:1.1rem;border-top:1px solid var(--border)">
+        <label class="fl">What price do you need?</label>
+        <div class="vtype-row">
+          <button class="vtype-btn sel" id="vtPrivate" onclick="setVtype('private')">
+            Private sale
+            <small>What you can achieve selling on Facebook Marketplace, eBay or Golf Clubs For Sale AU</small>
+          </button>
+          <button class="vtype-btn" id="vtTradein" onclick="setVtype('tradein')">
+            Trade-in / dealer
+            <small>What a pro shop or used dealer will pay you — instant, no hassle, lower price</small>
+          </button>
+        </div>
+      </div>
+
       <button class="calc" id="calcBtn" onclick="doCalc()">Calculate AU$ value →</button>
     </div>
 
@@ -581,9 +609,17 @@ footer a:hover{color:rgba(255,255,255,.75)}
     </div>
 
     <div class="rc" id="rc">
-      <div class="re">Estimated AU$ private sale range</div>
+      <div class="re" id="rMode">Estimated AU$ private sale range</div>
       <div class="rrange"><span class="rv" id="rFrom">$0</span><span class="rsep">–</span><span class="rv" id="rTo">$0</span></div>
       <div class="rsub" id="rSub">PGA ValueGuide anchored · AU market calibrated</div>
+
+      <div class="tradein-box" id="tradeinBox">
+        <div class="ti-label">Trade-in / dealer offer estimate</div>
+        <div class="ti-range" id="tiRange">$0 – $0</div>
+        <div class="ti-note">This is what a pro shop or used dealer would typically offer — 40–55% of private sale value. Instant, no photos, no negotiation, no waiting. Worth considering if you're upgrading at a pro shop or want a quick exit.</div>
+        <a class="ti-cta" href="https://www.thegolfclubexchange.com.au/sell-your-golf-clubs" target="_blank">Get a real trade-in quote ↗</a>
+      </div>
+
       <div class="method-box"><div class="mb-title">Calculation breakdown</div><div class="msteps" id="methodSteps"></div></div>
       <div class="confrow"><div class="confbar"><div class="conffill" id="cFill"></div></div><div class="conflbl" id="cLbl">Confidence: —</div></div>
       <div class="rtags" id="rTags"></div>
@@ -765,7 +801,13 @@ footer a:hover{color:rgba(255,255,255,.75)}
 </div>
 
 <script>
-var selCond=0,isLoading=false,selDex='RH';
+var selCond=0,isLoading=false,selDex='RH',selVtype='private';
+
+function setVtype(val){
+  selVtype=val;
+  document.getElementById('vtPrivate').classList.toggle('sel',val==='private');
+  document.getElementById('vtTradein').classList.toggle('sel',val==='tradein');
+}
 
 function setDex(val){
   selDex=val;
@@ -1529,9 +1571,26 @@ function renderResult(r,fullClub,year,condName){
   var low=Math.round(r.private_sale_low/5)*5;
   var high=Math.round(r.private_sale_high/5)*5;
   if(high<=low)high=low+25;
-  document.getElementById('rFrom').textContent='$'+low.toLocaleString();
-  document.getElementById('rTo').textContent='$'+high.toLocaleString();
-  document.getElementById('rSub').textContent=fullClub+' · '+condName+' · '+year;
+
+  // Trade-in range = 42–52% of private sale
+  var tiLow=Math.round(low*0.42/5)*5;
+  var tiHigh=Math.round(high*0.52/5)*5;
+
+  if(selVtype==='tradein'){
+    document.getElementById('rMode').textContent='Estimated AU$ trade-in / dealer offer';
+    document.getElementById('rFrom').textContent='$'+tiLow.toLocaleString();
+    document.getElementById('rTo').textContent='$'+tiHigh.toLocaleString();
+    document.getElementById('rSub').textContent=fullClub+' · '+condName+' · '+year+' · dealer offer estimate';
+    document.getElementById('tradeinBox').classList.remove('show');
+  } else {
+    document.getElementById('rMode').textContent='Estimated AU$ private sale range';
+    document.getElementById('rFrom').textContent='$'+low.toLocaleString();
+    document.getElementById('rTo').textContent='$'+high.toLocaleString();
+    document.getElementById('rSub').textContent=fullClub+' · '+condName+' · '+year;
+    // Show trade-in as secondary reference below private sale
+    document.getElementById('tiRange').textContent='$'+tiLow.toLocaleString()+' – $'+tiHigh.toLocaleString();
+    document.getElementById('tradeinBox').classList.add('show');
+  }
 
   var steps=[];
   if(r.pga_aud>0)steps.push('<span class="ms">PGA VG: $'+Math.round(r.pga_aud).toLocaleString()+' AU</span><span class="msep">·</span>');
