@@ -334,9 +334,10 @@ footer a:hover{color:rgba(255,255,255,.75)}
 <nav class="nav">
   <div class="nav-logo" onclick="sp('home')"><div class="nlm">YG</div><div class="nlt">Your<span>Golf</span></div></div>
   <div class="nav-links">
-    <a onclick="sp('home')" id="nav-home" class="active">Home</a>
+    <a href="/">Home</a>
     <a onclick="sp('tool')" id="nav-tool">Value tool</a>
     <a onclick="sp('guide')" id="nav-guide">Buyer's guide</a>
+    <a onclick="sp('sold')" id="nav-sold">Sold prices</a>
     <a onclick="sp('about')" id="nav-about">About</a>
     <a onclick="gsk()" class="ncta">Book coaching ↗</a>
   </div>
@@ -616,8 +617,7 @@ footer a:hover{color:rgba(255,255,255,.75)}
       <div class="tradein-box" id="tradeinBox">
         <div class="ti-label">Trade-in / dealer offer estimate</div>
         <div class="ti-range" id="tiRange">$0 – $0</div>
-        <div class="ti-note">This is what a pro shop or used dealer would typically offer — 40–55% of private sale value. Instant, no photos, no negotiation, no waiting. Worth considering if you're upgrading at a pro shop or want a quick exit.</div>
-        <a class="ti-cta" href="https://www.thegolfclubexchange.com.au/sell-your-golf-clubs" target="_blank">Get a real trade-in quote ↗</a>
+        <div class="ti-note">This is what a pro shop or used dealer would typically offer — 40–55% of private sale value. Instant, no photos, no negotiation, no waiting. Worth considering if you're upgrading at a pro shop or want a quick exit. Check with your local pro shop or AU used golf dealer for a real offer.</div>
       </div>
 
       <div class="method-box"><div class="mb-title">Calculation breakdown</div><div class="msteps" id="methodSteps"></div></div>
@@ -714,6 +714,168 @@ footer a:hover{color:rgba(255,255,255,.75)}
   </div>
 </div>
 
+<!-- SOLD PRICES -->
+<div class="page" id="page-sold">
+  <div class="tw">
+    <div class="ph">
+      <h1>Submit a sold price</h1>
+      <p>Sold a club recently? Tell us what it went for — you'll help make YourGolf valuations more accurate for every Australian golfer.</p>
+    </div>
+
+    <div class="tc" style="margin-bottom:1.4rem">
+      <div class="ct">Why this matters</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-top:.85rem">
+        <div style="background:var(--cyan-pale);border-radius:var(--rs);padding:.85rem 1rem">
+          <div style="font-size:.7rem;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem">The problem</div>
+          <p style="font-size:.85rem;color:#0A4D61;line-height:1.65">YourGolf valuations are anchored to US and UK pricing data. Real AU sold prices are the missing piece — and only Australian golfers have them.</p>
+        </div>
+        <div style="background:var(--cyan-pale);border-radius:var(--rs);padding:.85rem 1rem">
+          <div style="font-size:.7rem;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem">How you help</div>
+          <p style="font-size:.85rem;color:#0A4D61;line-height:1.65">Every sold price submitted makes the tool more accurate for the next person. It takes 60 seconds and directly improves AU golf pricing transparency.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tc" id="soldForm">
+      <div class="ct">What did you sell?</div>
+      <div class="cs">All fields are used to calibrate valuations — the more detail the better</div>
+
+      <div class="sku-grid" style="margin-bottom:.85rem">
+        <div class="gg">
+          <label class="fl">Brand</label>
+          <select id="soldBrand" onchange="updateSoldModels()">
+            <option value="">Select brand…</option>
+            <option value="callaway">Callaway</option>
+            <option value="cleveland">Cleveland</option>
+            <option value="cobra">Cobra</option>
+            <option value="honma">Honma</option>
+            <option value="mizuno">Mizuno</option>
+            <option value="odyssey">Odyssey</option>
+            <option value="ping">Ping</option>
+            <option value="pxg">PXG</option>
+            <option value="scotty">Scotty Cameron</option>
+            <option value="srixon">Srixon</option>
+            <option value="taylormade">TaylorMade</option>
+            <option value="titleist">Titleist</option>
+            <option value="wilson">Wilson Staff</option>
+            <option value="xxio">XXIO</option>
+            <option value="other">Other brand</option>
+          </select>
+        </div>
+        <div class="gg">
+          <label class="fl">Club type</label>
+          <select id="soldType" onchange="updateSoldModels()">
+            <option value="">Select type…</option>
+            <option value="driver">Driver</option>
+            <option value="fairway">Fairway wood</option>
+            <option value="hybrid">Hybrid / utility iron</option>
+            <option value="irons">Iron set</option>
+            <option value="wedge">Wedge</option>
+            <option value="putter">Putter</option>
+            <option value="shaft">Shaft (pull)</option>
+          </select>
+        </div>
+        <div class="gg">
+          <label class="fl">Model <span style="font-size:.68rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)">— or describe below</span></label>
+          <select id="soldModel" disabled>
+            <option value="">Select brand & type first…</option>
+          </select>
+        </div>
+        <div class="gg">
+          <label class="fl">Year</label>
+          <select id="soldYear" disabled>
+            <option value="">Select model first…</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-bottom:.85rem">
+        <label class="fl">Can't find your club? Describe it</label>
+        <input type="text" id="soldDesc" placeholder="e.g. Mizuno MP-20 HMB irons 4-PW, Bettinardi BB1 putter 34 inch…" style="margin-top:.35rem">
+      </div>
+
+      <div style="margin-bottom:1.1rem">
+        <label class="fl">Condition when sold</label>
+        <div class="crow">
+          <button class="cb" onclick="setSoldCond(this,1)">Like new<small>1–3 rounds</small></button>
+          <button class="cb" onclick="setSoldCond(this,2)">Good<small>Light use</small></button>
+          <button class="cb" onclick="setSoldCond(this,3)">Average<small>Normal wear</small></button>
+          <button class="cb" onclick="setSoldCond(this,4)">Worn<small>Heavy use</small></button>
+        </div>
+      </div>
+
+      <div class="cust-grid" style="margin-bottom:1.1rem">
+        <div class="cust-item">
+          <label class="fl">Sold price (AU$)</label>
+          <input type="number" id="soldPrice" placeholder="e.g. 850" min="0" max="50000" style="margin-top:.35rem">
+        </div>
+        <div class="cust-item">
+          <label class="fl">Where did you sell it?</label>
+          <select id="soldPlatform" style="margin-top:.35rem">
+            <option value="">Select platform…</option>
+            <option value="facebook">Facebook Marketplace</option>
+            <option value="golfclubsforsale">Golf Clubs For Sale Australia</option>
+            <option value="ebay">eBay Australia</option>
+            <option value="proshop">Pro shop / dealer trade-in</option>
+            <option value="gumtree">Gumtree</option>
+            <option value="direct">Direct / word of mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="cust-item">
+          <label class="fl">Approx. when did it sell?</label>
+          <select id="soldWhen" style="margin-top:.35rem">
+            <option value="">Select…</option>
+            <option value="this-week">This week</option>
+            <option value="this-month">This month</option>
+            <option value="1-3months">1–3 months ago</option>
+            <option value="3-6months">3–6 months ago</option>
+            <option value="6-12months">6–12 months ago</option>
+          </select>
+        </div>
+        <div class="cust-item">
+          <label class="fl">Dexterity</label>
+          <select id="soldDex" style="margin-top:.35rem">
+            <option value="RH">Right-handed</option>
+            <option value="LH">Left-handed</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.1rem">
+        <label class="fl">Shaft <span style="font-size:.68rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)">— optional but helpful</span></label>
+        <select id="soldShaft" style="margin-top:.35rem;width:100%">
+          <option value="stock">Stock / OEM shaft</option>
+          <option value="premium-x">Premium aftermarket X-flex (Modus 120X, DG Tour X…)</option>
+          <option value="premium-s">Premium aftermarket S-flex (Modus 120S, DG X100…)</option>
+          <option value="budget-after">Budget aftermarket replacement</option>
+          <option value="unknown">Unknown aftermarket</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom:1.1rem">
+        <label class="fl">Anything else worth noting? <span style="font-size:.68rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)">— optional</span></label>
+        <input type="text" id="soldNotes" placeholder="e.g. sold with headcover, re-gripped before sale, original receipt included…" style="margin-top:.35rem">
+      </div>
+
+      <div class="err-box" id="soldErrBox"></div>
+      <button class="calc" id="soldSubmitBtn" onclick="submitSoldPrice()" style="margin-top:1rem">Submit sold price →</button>
+    </div>
+
+    <div id="soldSuccess" style="display:none;background:var(--navy);color:#fff;border-radius:var(--r);padding:2rem;text-align:center;margin-bottom:1.4rem">
+      <div style="font-size:2rem;margin-bottom:.75rem">✓</div>
+      <div style="font-family:var(--fd);font-size:1.3rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:.5rem">Thanks — sold price submitted</div>
+      <p style="color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.7;max-width:420px;margin:0 auto 1.25rem">Your data goes directly into improving YourGolf's AU valuations. Every submission makes the tool more accurate for the next golfer.</p>
+      <button onclick="resetSoldForm()" style="background:var(--cyan);color:#fff;border:none;border-radius:var(--rs);padding:.6rem 1.25rem;font-family:var(--fd);font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;cursor:pointer">Submit another →</button>
+    </div>
+
+    <div class="tc" style="background:var(--cream)">
+      <div class="ct" style="font-size:1rem">What happens to your data</div>
+      <p style="font-size:.87rem;color:var(--muted);line-height:1.75;margin-top:.5rem">Submitted sold prices are reviewed by Scott Spence and used to calibrate YourGolf's AU valuation ranges over time. We never share individual submissions publicly or attribute prices to specific sellers. Your email is not required to submit a sold price.</p>
+    </div>
+  </div>
+</div>
+
 <!-- ABOUT -->
 <div class="page" id="page-about">
   <div class="aw">
@@ -756,6 +918,20 @@ footer a:hover{color:rgba(255,255,255,.75)}
   <a onclick="gsk()">Book coaching ↗</a>
   <br>yourgolf.com.au &nbsp;·&nbsp; Built by Scott Spence, PGA Professional &nbsp;·&nbsp; Estimates only — always verify with live listings
 </footer>
+
+<!-- Hidden Netlify form for sold price submissions -->
+<form name="yourgolf-soldprices" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="club">
+  <input type="text" name="year">
+  <input type="text" name="condition">
+  <input type="text" name="price">
+  <input type="text" name="platform">
+  <input type="text" name="when">
+  <input type="text" name="dexterity">
+  <input type="text" name="shaft">
+  <input type="text" name="notes">
+  <input type="text" name="bot-field">
+</form>
 
 <!-- Hidden Netlify form — required for Netlify to detect and activate form collection -->
 <form name="yourgolf-signups" netlify netlify-honeypot="bot-field" hidden>
@@ -1545,6 +1721,113 @@ async function runValuation(){
     console.error('Valuation error:',e);
   }
   isLoading=false;
+}
+
+var selSoldCond=0;
+
+function setSoldCond(btn,val){
+  document.querySelectorAll('#soldForm .cb').forEach(function(b){b.classList.remove('sel')});
+  btn.classList.add('sel');
+  selSoldCond=val;
+}
+
+function updateSoldModels(){
+  var brand=document.getElementById('soldBrand').value;
+  var type=document.getElementById('soldType').value;
+  var modelSel=document.getElementById('soldModel');
+  var yearSel=document.getElementById('soldYear');
+  modelSel.innerHTML='<option value="">Select model…</option>';
+  yearSel.innerHTML='<option value="">Select model first…</option>';
+  modelSel.disabled=true;yearSel.disabled=true;
+  if(!brand||!type||brand==='other'){modelSel.innerHTML='<option value="">Type club name in description above</option>';return;}
+  var models=(CLUBS[brand]&&CLUBS[brand][type])?CLUBS[brand][type]:[];
+  if(models.length===0){modelSel.innerHTML='<option value="">Not listed — use description above</option>';return;}
+  models.forEach(function(m){
+    var opt=document.createElement('option');
+    opt.value=m[0];opt.textContent=m[0];opt.dataset.years=JSON.stringify(m[1]);
+    modelSel.appendChild(opt);
+  });
+  modelSel.disabled=false;
+  modelSel.onchange=function(){updateSoldYears(modelSel);};
+}
+
+function updateSoldYears(modelSel){
+  var yearSel=document.getElementById('soldYear');
+  yearSel.innerHTML='<option value="">Select year…</option>';
+  var selected=modelSel.options[modelSel.selectedIndex];
+  if(!selected||!selected.dataset.years){yearSel.disabled=true;return;}
+  var years=JSON.parse(selected.dataset.years);
+  if(years.length===0){yearSel.innerHTML='<option value="">Year N/A</option>';yearSel.disabled=true;return;}
+  var allYears=new Set();
+  years.forEach(function(y){for(var i=y+2;i>=Math.max(y-1,2010);i--)allYears.add(i);});
+  Array.from(allYears).sort(function(a,b){return b-a}).forEach(function(y){
+    var opt=document.createElement('option');opt.value=y;opt.textContent=y;yearSel.appendChild(opt);
+  });
+  yearSel.disabled=false;
+}
+
+async function submitSoldPrice(){
+  var brand=document.getElementById('soldBrand').value;
+  var type=document.getElementById('soldType').value;
+  var model=document.getElementById('soldModel').value;
+  var year=document.getElementById('soldYear').value;
+  var desc=document.getElementById('soldDesc').value.trim();
+  var price=document.getElementById('soldPrice').value;
+  var platform=document.getElementById('soldPlatform').value;
+  var when=document.getElementById('soldWhen').value;
+  var dex=document.getElementById('soldDex').value;
+  var shaft=document.getElementById('soldShaft').value;
+  var notes=document.getElementById('soldNotes').value.trim();
+  var errEl=document.getElementById('soldErrBox');
+  errEl.classList.remove('show');
+  var clubDesc=desc;
+  if(!clubDesc&&model)clubDesc=brand+' '+model+(type?' ('+type+')':'');
+  if(!clubDesc&&brand)clubDesc=brand+(type?' '+type:'');
+  if(!clubDesc){errEl.textContent='Please select a club or describe it in the text field.';errEl.classList.add('show');return;}
+  if(!selSoldCond){errEl.textContent='Please select the condition when sold.';errEl.classList.add('show');return;}
+  if(!price||isNaN(price)||Number(price)<=0){errEl.textContent='Please enter the sold price in AU$.';errEl.classList.add('show');return;}
+  if(!platform){errEl.textContent='Please select where it was sold.';errEl.classList.add('show');return;}
+  if(!when){errEl.textContent='Please select approximately when it sold.';errEl.classList.add('show');return;}
+  var condNames=['Like new','Good','Average','Worn'];
+  var condName=condNames[selSoldCond-1];
+  document.getElementById('soldSubmitBtn').disabled=true;
+  document.getElementById('soldSubmitBtn').textContent='Submitting…';
+  try{
+    var formData=new URLSearchParams();
+    formData.append('form-name','yourgolf-soldprices');
+    formData.append('club',clubDesc+(year?' ('+year+')':''));
+    formData.append('year',year||'not specified');
+    formData.append('condition',condName);
+    formData.append('price','AU$'+price);
+    formData.append('platform',platform);
+    formData.append('when',when);
+    formData.append('dexterity',dex);
+    formData.append('shaft',shaft);
+    formData.append('notes',notes||'none');
+    formData.append('bot-field','');
+    await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:formData.toString()});
+  }catch(e){console.warn('Form submission failed:',e);}
+  document.getElementById('soldForm').style.display='none';
+  document.getElementById('soldSuccess').style.display='block';
+}
+
+function resetSoldForm(){
+  document.getElementById('soldForm').style.display='block';
+  document.getElementById('soldSuccess').style.display='none';
+  document.getElementById('soldSubmitBtn').disabled=false;
+  document.getElementById('soldSubmitBtn').textContent='Submit sold price →';
+  ['soldBrand','soldType','soldPlatform','soldWhen','soldDex'].forEach(function(id){document.getElementById(id).value='';});
+  document.getElementById('soldDex').value='RH';
+  document.getElementById('soldShaft').value='stock';
+  document.getElementById('soldModel').innerHTML='<option value="">Select brand & type first…</option>';
+  document.getElementById('soldModel').disabled=true;
+  document.getElementById('soldYear').innerHTML='<option value="">Select model first…</option>';
+  document.getElementById('soldYear').disabled=true;
+  document.getElementById('soldDesc').value='';
+  document.getElementById('soldPrice').value='';
+  document.getElementById('soldNotes').value='';
+  selSoldCond=0;
+  document.querySelectorAll('#soldForm .cb').forEach(function(b){b.classList.remove('sel')});
 }
 
 function renderCounter(){
