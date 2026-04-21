@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://www.yourgolf.com.au/*"
+  to = "https://yourgolf.com.au/:splat"
+  status = 301
+  force = true
