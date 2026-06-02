@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>What Are My Golf Clubs Worth in Australia? | YourGolf Valuation Tool</title>
+<meta name="description" content="Free used golf club valuation tool built for Australia. Select your exact club and get an AU$ private sale estimate anchored to PGA ValueGuide data. Built by PGA coach Scott Spence.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yourgolf.com.au/value-tool">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<!-- Open Graph (Facebook, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourgolf.com.au/value-tool">
+<meta property="og:title" content="What Are My Golf Clubs Worth in Australia? | YourGolf">
+<meta property="og:description" content="Free used golf club valuations for Australia. PGA ValueGuide anchored, AU market calibrated. Find out what your clubs are worth before you buy or sell.">
+<meta property="og:site_name" content="YourGolf">
+
+<!-- Twitter/X -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What Are My Golf Clubs Worth in Australia? | YourGolf">
+<meta name="twitter:description" content="Free used golf club valuations anchored to PGA ValueGuide data, calibrated for the Australian market. Built by PGA coach Scott Spence.">
+
+<!-- Schema markup — WebSite + WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "YourGolf Club Valuation Tool",
+  "url": "https://yourgolf.com.au",
+  "description": "Free used golf club valuation tool for Australia. Anchored to PGA ValueGuide resale data with Australian market calibration.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "AUD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Scott Spence",
+    "jobTitle": "PGA Professional Golf Coach",
+    "url": "https://skillest.com/@scottypro"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much are my used golf clubs worth in Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Australian used golf club prices run 15–25% higher than equivalent UK and US prices after currency conversion, due to lower local supply and higher import costs. Use the YourGolf valuation tool to get a free estimate anchored to PGA ValueGuide resale data and calibrated to the Australian market."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the best place to sell used golf clubs in Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Facebook Marketplace and the Golf Clubs For Sale Australia group are the fastest for local sales. eBay Australia gives the broadest national reach. For premium or niche clubs, patience on Facebook Marketplace typically gets the best price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the YourGolf valuation tool work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Select your exact club brand, type, model and year from the dropdowns, choose a condition grade, add any customisations (aftermarket shaft, grips, length) and dexterity. The tool cross-references PGA ValueGuide US resale data and Golfbidder UK pricing, applies a 15–25% Australian market premium, and calculates a realistic private sale range."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1B2A4A;--navy-mid:#243660;--navy-light:#2E4480;
+  --cyan:#1B9EC2;--cyan-light:#3ABFDF;--cyan-pale:#E3F6FB;
+  --cream:#F7F8FA;--white:#fff;--dark:#111827;--muted:#5A6478;
+  --border:rgba(27,42,74,0.12);--gold:#D4A843;--gold-pale:#FDF6E3;
+  --fd:'Barlow Condensed',sans-serif;--fb:'Barlow',sans-serif;
+  --r:12px;--rs:8px;--sh:0 2px 16px rgba(27,42,74,0.09);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--cream);color:var(--dark);min-height:100vh}
+.nav{background:var(--navy);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.22)}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer}
+.nlm{width:32px;height:32px;background:var(--cyan);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:700;font-size:1rem;color:#fff}
+.nlt{font-family:var(--fd);font-weight:700;font-size:1.25rem;color:#fff;letter-spacing:.02em}
+.nlt span{color:var(--cyan-light)}
+.nav-links{display:flex;gap:1.25rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);font-size:.88rem;font-weight:500;text-decoration:none;cursor:pointer;transition:color .2s;padding:4px 0;border-bottom:2px solid transparent}
+.nav-links a:hover{color:#fff}
+.nav-links a.active{color:#fff;border-bottom-color:var(--cyan-light)}
+.ncta{background:var(--cyan)!important;color:#fff!important;padding:6px 12px!important;border-radius:var(--rs)!important;border-bottom:none!important;font-size:.83rem!important}
+.ncta:hover{background:var(--cyan-light)!important}
+.page{display:none}
+.page.active{display:block;animation:fu .3s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.btn{padding:.75rem 1.75rem;border-radius:var(--rs);font-family:var(--fb);font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;border:none;display:inline-flex;align-items:center;gap:6px}
+.btn-cyan{background:var(--cyan);color:#fff;box-shadow:0 4px 14px rgba(27,158,194,.35)}
+.btn-cyan:hover{background:var(--cyan-light);transform:translateY(-1px)}
+.btn-ow{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+.btn-ow:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-mid);transform:translateY(-1px)}
+.hero{background:var(--navy);color:#fff;padding:4.5rem 2rem 3.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 15% 85%,rgba(27,158,194,.18) 0%,transparent 55%),radial-gradient(ellipse at 85% 15%,rgba(46,68,128,.4) 0%,transparent 55%)}
+.hi{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(27,158,194,.15);border:1px solid rgba(58,191,223,.3);color:var(--cyan-light);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:20px;margin-bottom:1.25rem}
+.hbd{width:5px;height:5px;background:var(--cyan-light);border-radius:50%}
+.hero h1{font-family:var(--fd);font-size:clamp(2.2rem,5.5vw,3.8rem);font-weight:700;line-height:1.1;margin-bottom:1rem;letter-spacing:.01em;text-transform:uppercase}
+.hero h1 em{color:var(--cyan-light);font-style:normal}
+.hero p{font-size:1rem;opacity:.8;max-width:500px;margin:0 auto 2rem;line-height:1.75}
+.hcta{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.tbar{background:var(--navy-mid);border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:center;align-items:center;gap:2rem;padding:.8rem 2rem;flex-wrap:wrap}
+.ti{color:rgba(255,255,255,.65);font-size:.8rem;font-weight:500;display:flex;align-items:center;gap:5px}
+.ti strong{color:var(--cyan-light)}
+.sbar{background:var(--white);border-bottom:1px solid var(--border);display:flex;justify-content:center}
+.sbi{padding:1.1rem 2rem;text-align:center;border-right:1px solid var(--border);flex:1;max-width:240px}
+.sbi:last-child{border-right:none}
+.sbn{font-family:var(--fd);font-size:1.7rem;color:var(--navy);font-weight:700}
+.sbl{font-size:.75rem;color:var(--muted);margin-top:2px}
+.sec{padding:3.5rem 2rem}
+.si2{max-width:960px;margin:0 auto}
+.ey{font-size:.72rem;font-weight:600;color:var(--cyan);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.4rem}
+.stl{font-family:var(--fd);font-size:1.9rem;color:var(--navy);margin-bottom:.5rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.ssu{color:var(--muted);line-height:1.7;max-width:520px;margin-bottom:2rem;font-size:.92rem}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.1rem}
+.fc{background:var(--white);border-radius:var(--r);border:1px solid var(--border);padding:1.5rem;transition:box-shadow .2s,transform .2s}
+.fc:hover{box-shadow:var(--sh);transform:translateY(-2px)}
+.fi{width:38px;height:38px;background:var(--cyan-pale);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:.85rem}
+.fc h3{font-family:var(--fd);color:var(--navy);font-size:.95rem;font-weight:700;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.02em}
+.fc p{color:var(--muted);font-size:.85rem;line-height:1.6}
+.how-sec{background:var(--navy);color:#fff;padding:3.5rem 2rem}
+.how-in{max-width:900px;margin:0 auto;text-align:center}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.25rem;margin-top:2rem}
+.snum{width:40px;height:40px;background:rgba(27,158,194,.15);border:1.5px solid rgba(58,191,223,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--cyan-light);margin:0 auto .85rem}
+.step h4{font-size:.88rem;font-weight:600;margin-bottom:.35rem;color:#fff;text-transform:uppercase;letter-spacing:.04em}
+.step p{font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.55}
+.csec{background:linear-gradient(135deg,var(--navy-mid) 0%,var(--navy) 100%);padding:4.5rem 2rem;color:#fff}
+.cin{max-width:880px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.ctxt p{color:rgba(255,255,255,.75);line-height:1.8;margin-bottom:1rem;font-size:.93rem}
+.ccard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:1.75rem}
+.chead{display:flex;align-items:center;gap:12px;margin-bottom:1.4rem}
+.cbadge{width:50px;height:50px;background:linear-gradient(135deg,var(--cyan) 0%,var(--navy-light) 100%);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:700;font-size:1.1rem;color:#fff;flex-shrink:0}
+.cname{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.03em;line-height:1.2}
+.crole{font-size:.78rem;color:var(--cyan-light);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
+.cfts{display:flex;flex-direction:column;gap:.65rem;margin-bottom:1.5rem}
+.cfi{display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:rgba(255,255,255,.8);line-height:1.5}
+.cfd{width:5px;height:5px;background:var(--cyan-light);border-radius:50%;margin-top:7px;flex-shrink:0}
+.skbtn{display:block;width:100%;padding:.85rem;background:var(--cyan);color:#fff;border:none;border-radius:var(--rs);font-family:var(--fd);font-size:1rem;font-weight:700;text-align:center;cursor:pointer;text-decoration:none;letter-spacing:.04em;text-transform:uppercase;transition:all .2s}
+.skbtn:hover{background:var(--cyan-light);transform:translateY(-1px)}
+.sknote{font-size:.73rem;color:rgba(255,255,255,.4);text-align:center;margin-top:.5rem}
+.tw{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+.ph{margin-bottom:1.75rem;padding-bottom:1.4rem;border-bottom:1px solid var(--border)}
+.ph h1{font-family:var(--fd);font-size:1.9rem;color:var(--navy);font-weight:700;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.25rem}
+.ph p{color:var(--muted);font-size:.9rem}
+.tc{background:var(--white);border-radius:var(--r);border:1px solid var(--border);padding:1.75rem;margin-bottom:1.4rem;box-shadow:var(--sh)}
+.ct{font-family:var(--fd);font-size:1.15rem;color:var(--navy);font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:.25rem}
+.cs{color:var(--muted);font-size:.85rem;margin-bottom:1.4rem}
+.fl{font-size:.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:.35rem}
+select,input[type=number]{padding:.6rem .9rem;border:1px solid var(--border);border-radius:var(--rs);font-family:var(--fb);font-size:.92rem;background:var(--cream);color:var(--dark);appearance:none;-webkit-appearance:none;transition:border-color .2s,box-shadow .2s;width:100%}
+select:focus,input:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(27,158,194,.12)}
+select:disabled{opacity:.38;cursor:not-allowed;background:#eee}
+.sku-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-bottom:1.1rem}
+.gg{display:flex;flex-direction:column;gap:.35rem}
+.progress-dots{display:flex;gap:.4rem;align-items:center;margin-bottom:1.1rem}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:background .3s}
+.dot.done{background:var(--cyan)}
+.dot.active{background:var(--navy);transform:scale(1.2)}
+.crow{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:.5rem}
+.dex-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.5rem}
+.dex-btn{padding:.65rem;border:1px solid var(--border);border-radius:var(--rs);background:var(--cream);cursor:pointer;font-family:var(--fb);font-size:.82rem;font-weight:600;text-align:center;transition:all .18s;color:var(--dark);text-transform:uppercase;letter-spacing:.03em}
+.dex-btn:hover{border-color:var(--cyan);background:var(--cyan-pale)}
+.dex-btn.sel{background:var(--navy);color:#fff;border-color:var(--navy)}
+.vtype-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.5rem}
+.vtype-btn{padding:.75rem;border:1.5px solid var(--border);border-radius:var(--rs);background:var(--cream);cursor:pointer;font-family:var(--fb);font-size:.84rem;font-weight:600;text-align:left;transition:all .18s;color:var(--dark);line-height:1.4;display:flex;flex-direction:column;gap:3px}
+.vtype-btn small{font-size:.72rem;font-weight:400;color:var(--muted);line-height:1.4}
+.vtype-btn:hover{border-color:var(--cyan);background:var(--cyan-pale)}
+.vtype-btn.sel{border-color:var(--navy);background:var(--navy);color:#fff}
+.vtype-btn.sel small{color:rgba(255,255,255,.6)}
+.tradein-box{background:var(--gold-pale);border:1px solid rgba(212,168,67,.3);border-radius:var(--rs);padding:.85rem 1rem;margin-top:.9rem;display:none}
+.tradein-box.show{display:block}
+.ti-label{font-size:.7rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem}
+.ti-range{font-family:var(--fd);font-size:1.6rem;font-weight:700;color:#7A5800;margin-bottom:.2rem}
+.ti-note{font-size:.78rem;color:#8B6010;line-height:1.6}
+.ti-cta{display:inline-flex;align-items:center;gap:5px;background:var(--navy);color:#fff;padding:.45rem .9rem;border-radius:var(--rs);font-family:var(--fd);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;transition:background .2s;margin-top:.65rem;cursor:pointer}
+.ti-cta:hover{background:var(--navy-mid)}
+.cb{padding:.6rem .3rem;border:1px solid var(--border);border-radius:var(--rs);background:var(--cream);cursor:pointer;font-family:var(--fb);font-size:.76rem;font-weight:600;text-align:center;transition:all .18s;color:var(--dark);line-height:1.4;text-transform:uppercase;letter-spacing:.02em}
+.cb small{display:block;font-size:.65rem;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0;margin-top:2px}
+.cb:hover{border-color:var(--cyan);background:var(--cyan-pale)}
+.cb.sel{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cb.sel small{color:rgba(255,255,255,.6)}
+.cust-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-top:.85rem}
+.cust-item{display:flex;flex-direction:column;gap:.35rem}
+.extras-row{display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:.6rem}
+.extras-row label{display:flex;align-items:center;gap:.4rem;font-size:.85rem;cursor:pointer}
+.calc{width:100%;padding:.85rem;background:var(--navy);color:#fff;border:none;border-radius:var(--rs);font-family:var(--fd);font-size:1.05rem;font-weight:700;cursor:pointer;margin-top:1.4rem;transition:all .2s;letter-spacing:.05em;text-transform:uppercase}
+.calc:hover{background:var(--navy-mid);transform:translateY(-1px)}
+.calc:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.loading-state{display:none;text-align:center;padding:2rem;background:var(--navy);border-radius:var(--r);margin-bottom:1.4rem;color:#fff}
+.loading-state.show{display:block;animation:fu .3s ease both}
+.spinner{width:32px;height:32px;border:3px solid rgba(58,191,223,.3);border-top-color:var(--cyan-light);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto .85rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-state p{font-size:.9rem;opacity:.75}
+.rc{display:none;background:var(--navy);color:#fff;border-radius:var(--r);padding:1.75rem;margin-bottom:1.4rem;box-shadow:0 8px 32px rgba(27,42,74,.14)}
+.rc.show{display:block;animation:fu .4s ease both}
+.re{font-size:.7rem;opacity:.55;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.35rem;font-weight:600}
+.rrange{display:flex;align-items:baseline;gap:.4rem;margin-bottom:.3rem}
+.rrange .rv{font-family:var(--fd);font-size:clamp(2.2rem,5vw,3rem);font-weight:700;color:var(--cyan-light);letter-spacing:.02em}
+.rrange .rsep{color:rgba(255,255,255,.3);font-size:1.8rem;font-family:var(--fd)}
+.rsub{font-size:.8rem;opacity:.6;margin-bottom:1.1rem}
+.method-box{background:rgba(27,158,194,.1);border:1px solid rgba(58,191,223,.2);border-radius:var(--rs);padding:.85rem 1rem;margin-bottom:1.1rem}
+.mb-title{font-size:.68rem;font-weight:700;color:var(--cyan-light);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.45rem}
+.msteps{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;font-size:.78rem;color:rgba(255,255,255,.75)}
+.ms{background:rgba(255,255,255,.09);border-radius:4px;padding:.18rem .45rem;white-space:nowrap}
+.msep{opacity:.4;font-size:.75rem}
+.confrow{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem}
+.confbar{flex:1;height:4px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden}
+.conffill{height:100%;background:var(--cyan-light);border-radius:2px;transition:width 1s cubic-bezier(.4,0,.2,1);width:0%}
+.conflbl{font-size:.76rem;opacity:.7;white-space:nowrap}
+.rtags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.9rem}
+.tag{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:.22rem .65rem;font-size:.73rem;color:rgba(255,255,255,.85)}
+.tag.pos{background:rgba(26,122,60,.25);border-color:rgba(26,122,60,.4);color:#7ee8a2}
+.tag.neg{background:rgba(155,28,28,.2);border-color:rgba(155,28,28,.35);color:#fca5a5}
+.rdiv{border:none;border-top:1px solid rgba(255,255,255,.12);margin-bottom:.9rem}
+.rnote{font-size:.83rem;opacity:.7;line-height:1.75}
+.rnudge{background:rgba(27,158,194,.15);border:1px solid rgba(58,191,223,.25);border-radius:var(--rs);padding:.85rem 1rem;margin-top:1.1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.rnudge-t{font-size:.83rem;color:rgba(255,255,255,.85);line-height:1.5}
+.rnudge-t strong{color:var(--cyan-light)}
+.nb{background:var(--cyan);color:#fff;border:none;border-radius:var(--rs);padding:.45rem .9rem;font-family:var(--fd);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;white-space:nowrap;transition:background .2s;text-decoration:none}
+.nb:hover{background:var(--cyan-light)}
+.sellc{background:var(--gold-pale);border:1px solid rgba(212,168,67,.25);border-radius:var(--r);padding:1.5rem 1.75rem;margin-bottom:1.4rem}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.si3{background:var(--white);border-radius:var(--rs);padding:.9rem;border:1px solid rgba(212,168,67,.18)}
+.sil{font-size:.7rem;font-weight:700;color:#9A7010;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem}
+.si3 p{font-size:.84rem;color:#444;line-height:1.6}
+.err-box{display:none;background:#fde8e8;border:1px solid rgba(155,28,28,.25);border-radius:var(--rs);padding:.85rem 1rem;margin-top:.75rem;font-size:.85rem;color:#7f1d1d}
+.err-box.show{display:block}
+.gate-overlay{display:none;position:fixed;inset:0;background:rgba(17,24,39,.75);z-index:200;align-items:center;justify-content:center;padding:1.5rem}
+.gate-overlay.show{display:flex;animation:fadeOverlay .25s ease both}
+@keyframes fadeOverlay{from{opacity:0}to{opacity:1}}
+.gate-modal{background:var(--white);border-radius:var(--r);padding:2rem;max-width:460px;width:100%;box-shadow:0 24px 64px rgba(0,0,0,.25);animation:slideUp .3s ease both}
+@keyframes slideUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.gate-badge{display:inline-flex;align-items:center;gap:6px;background:var(--cyan-pale);border:1px solid rgba(27,158,194,.2);color:var(--cyan);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;padding:.28rem .75rem;border-radius:20px;margin-bottom:1rem}
+.gate-modal h2{font-family:var(--fd);font-size:1.5rem;color:var(--navy);font-weight:700;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.4rem}
+.gate-modal p{color:var(--muted);font-size:.88rem;line-height:1.65;margin-bottom:1.25rem}
+.gate-form{display:flex;flex-direction:column;gap:.75rem}
+.gate-field{display:flex;flex-direction:column;gap:.3rem}
+.gate-field label{font-size:.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.gate-field input,.gate-field select{padding:.65rem .9rem;border:1px solid var(--border);border-radius:var(--rs);font-family:var(--fb);font-size:.92rem;background:var(--cream);color:var(--dark);width:100%;appearance:none;-webkit-appearance:none;transition:border-color .2s,box-shadow .2s}
+.gate-field input:focus,.gate-field select:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(27,158,194,.12)}
+.gate-submit{width:100%;padding:.85rem;background:var(--navy);color:#fff;border:none;border-radius:var(--rs);font-family:var(--fd);font-size:1.05rem;font-weight:700;cursor:pointer;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;margin-top:.25rem}
+.gate-submit:hover{background:var(--navy-mid);transform:translateY(-1px)}
+.gate-privacy{font-size:.72rem;color:var(--muted);text-align:center;margin-top:.6rem;line-height:1.5}
+.gate-free-count{display:flex;gap:.4rem;margin-bottom:1.1rem}
+.gate-pip{width:10px;height:10px;border-radius:50%;background:var(--cyan)}
+.gate-pip.empty{background:var(--border)}
+.fallback-toggle{display:flex;align-items:center;gap:.5rem;margin-top:.75rem;cursor:pointer;width:fit-content}
+.fallback-toggle input[type=checkbox]{width:16px;height:16px;accent-color:var(--cyan);cursor:pointer;flex-shrink:0}
+.fallback-toggle-label{font-size:.83rem;color:var(--cyan);font-weight:500;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.fallback-panel{display:none;margin-top:.85rem;padding:.85rem 1rem;background:var(--cyan-pale);border:1px solid rgba(27,158,194,.2);border-radius:var(--rs)}
+.fallback-panel.show{display:block;animation:fu .25s ease both}
+.fallback-panel p{font-size:.82rem;color:var(--muted);margin-bottom:.5rem;line-height:1.55}
+input[type=text]{padding:.6rem .9rem;border:1px solid var(--border);border-radius:var(--rs);font-family:var(--fb);font-size:.92rem;background:var(--white);color:var(--dark);transition:border-color .2s,box-shadow .2s;width:100%}
+input[type=text]:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(27,158,194,.12)}
+.gw{max-width:760px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+.ghe{text-align:center;padding:1rem 0 2.25rem}
+.ghe h1{font-family:var(--fd);font-size:2rem;color:var(--navy);margin-bottom:.4rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.ghe p{color:var(--muted);max-width:500px;margin:0 auto;line-height:1.75;font-size:.93rem}
+.gc{background:var(--white);border-radius:var(--r);border:1px solid var(--border);padding:1.6rem;margin-bottom:1.1rem;box-shadow:var(--sh)}
+.ghd{font-family:var(--fd);font-size:1.1rem;color:var(--navy);margin-bottom:.85rem;display:flex;align-items:center;gap:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.gnum{width:28px;height:28px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:600;flex-shrink:0}
+.gc p{color:#3D3D3A;line-height:1.8;font-size:.91rem;margin-bottom:.75rem}
+.gc p:last-child{margin-bottom:0}
+.tbox{background:var(--cyan-pale);border-left:3px solid var(--cyan);border-radius:0 var(--rs) var(--rs) 0;padding:.85rem 1rem;margin-top:.9rem}
+.tlbl{font-weight:700;font-size:.7rem;color:var(--cyan);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem}
+.tbox p{color:#0A4D61!important;font-size:.85rem!important;margin:0!important}
+.formula-box{background:var(--navy);color:#fff;border-radius:var(--rs);padding:1rem 1.25rem;margin:.9rem 0;font-family:var(--fd);font-size:.95rem;letter-spacing:.02em;text-align:center}
+.formula-box em{color:var(--cyan-light);font-style:normal}
+.formula-box small{display:block;font-family:var(--fb);font-size:.76rem;color:rgba(255,255,255,.5);margin-top:.35rem;letter-spacing:0}
+.it{width:100%;border-collapse:collapse;margin-top:.7rem;font-size:.84rem}
+.it th{background:var(--cyan-pale);color:var(--navy);font-weight:600;padding:.5rem .85rem;text-align:left;border-bottom:1px solid var(--border);font-size:.77rem;text-transform:uppercase;letter-spacing:.04em}
+.it td{padding:.5rem .85rem;border-bottom:1px solid var(--border);color:#3D3D3A;vertical-align:top;line-height:1.5}
+.it tr:last-child td{border-bottom:none}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:.7rem}
+.mk{background:var(--cyan-pale);border-radius:var(--rs);padding:.8rem}
+.mk strong{color:var(--navy);font-size:.85rem;display:block;margin-bottom:.25rem}
+.mk span{color:#3D3D3A;font-size:.8rem;line-height:1.6}
+.plus{color:#1a7a3c;font-weight:700}
+.minus{color:#9b1c1c;font-weight:700}
+.aw{max-width:720px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+.aw h1{font-family:var(--fd);font-size:2rem;color:var(--navy);margin-bottom:.3rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.aw>.asub{color:var(--muted);margin-bottom:2rem;font-size:.92rem}
+.acard{background:var(--white);border-radius:var(--r);border:1px solid var(--border);padding:1.5rem 1.75rem;margin-bottom:1rem;box-shadow:var(--sh)}
+.acard h3{font-family:var(--fd);color:var(--navy);margin-bottom:.6rem;font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.acard p{color:#3D3D3A;font-size:.9rem;line-height:1.75}
+.acccard{background:var(--navy);color:#fff;border-radius:var(--r);padding:1.75rem;margin-bottom:1rem;display:flex;gap:1.5rem;align-items:flex-start}
+.acbadge{width:64px;height:64px;background:linear-gradient(135deg,var(--cyan) 0%,var(--navy-light) 100%);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:700;font-size:1.4rem;color:#fff;flex-shrink:0}
+.aci h3{font-family:var(--fd);color:#fff;font-size:1.3rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:2px}
+.aci .ar{color:var(--cyan-light);font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.75rem}
+.aci p{color:rgba(255,255,255,.72);font-size:.88rem;line-height:1.7;margin-bottom:.75rem}
+.sklink{display:inline-flex;align-items:center;gap:6px;background:var(--cyan);color:#fff;padding:.5rem 1.1rem;border-radius:var(--rs);font-family:var(--fd);font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;transition:background .2s;cursor:pointer}
+.sklink:hover{background:var(--cyan-light)}
+footer{background:var(--dark);color:rgba(255,255,255,.4);text-align:center;padding:2rem 1.5rem;font-size:.82rem;line-height:1.9;margin-top:2rem}
+.flogo{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.5rem}
+footer a{color:rgba(255,255,255,.45);text-decoration:none;cursor:pointer}
+footer a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  .sku-grid,.cust-grid,.sg{grid-template-columns:1fr}
+  .crow{grid-template-columns:repeat(2,1fr)}
+  .sbar{flex-wrap:wrap}
+  .sbi{border-right:none;border-bottom:1px solid var(--border);min-width:50%}
+  .nav-links{gap:.75rem}.nav-links a{font-size:.8rem}
+  .cin{grid-template-columns:1fr;gap:2rem}
+  .steps{grid-template-columns:1fr 1fr}
+  .acccard{flex-direction:column}
+  .tbar{gap:1rem}
+  .mg{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="nav-logo" href="/"><div class="nlm">YG</div><div class="nlt">Your<span>Golf</span></div></a>
+  <div class="nav-links">
+    <a href="/">Coaching</a>
+    <a onclick="sp('tool')" id="nav-tool">Value tool</a>
+    <a onclick="sp('guide')" id="nav-guide">Buyer's guide</a>
+    <a onclick="sp('sold')" id="nav-sold">Sold prices</a>
+    <a onclick="sp('about')" id="nav-about">About</a>
+    <a href="https://instagram.com/yourgolfcoachscott" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+    <a onclick="gsk()" class="ncta">Book a lesson ↗</a>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hi">
+      <div class="hbadge"><span class="hbd"></span>Free · Australia-specific · PGA ValueGuide anchored</div>
+      <h1>What are my golf clubs<br>worth <em>in Australia?</em></h1>
+      <p style="font-size:1.15rem;opacity:.95;font-weight:500;margin-bottom:.75rem">Select your exact club. Get an AU$ private sale range in 60 seconds.</p>
+      <p>Anchored to PGA ValueGuide resale data, calibrated to real Australian market pricing, and backed by a PGA professional. Free — no signup required to start.</p>
+      <div class="hcta" style="margin-top:2rem">
+        <button class="btn btn-cyan" onclick="sp('tool')">Value my clubs now →</button>
+        <button class="btn btn-ow" onclick="sp('guide')">Read the pricing guide</button>
+      </div>
+    </div>
+  </div>
+  <div class="tbar">
+    <div class="ti">✓ Anchored to <strong>PGA ValueGuide</strong> resale data</div>
+    <div class="ti">✓ Calibrated to <strong>AU market pricing</strong></div>
+    <div class="ti">✓ <strong>15–25% AU premium</strong> built in</div>
+    <div class="ti">✓ Backed by <strong>PGA coach Scott Spence</strong></div>
+  </div>
+  <div class="sbar">
+    <div class="sbi"><div class="sbn">3</div><div class="sbl">Markets cross-referenced</div></div>
+    <div class="sbi"><div class="sbn">15–25%</div><div class="sbl">Observed AU premium vs US/UK</div></div>
+    <div class="sbi"><div class="sbn">SKU-level</div><div class="sbl">Exact model identification</div></div>
+    <div class="sbi"><div class="sbn">100%</div><div class="sbl">Free, no login needed</div></div>
+  </div>
+  <div class="sec">
+    <div class="si2">
+      <div class="ey">How it works</div>
+      <h2 class="stl">Select your club. Get your AU price.</h2>
+      <p class="ssu">Choose your exact club from the dropdown — brand, type, model, year. The tool calculates your AU private sale range from real market data.</p>
+      <div class="fg">
+        <div class="fc"><div class="fi">📋</div><h3>SKU-level accuracy</h3><p>Select your exact brand, club type, model and year from structured dropdowns — no ambiguous descriptions, no guesswork.</p></div>
+        <div class="fc"><div class="fi">🇺🇸</div><h3>PGA ValueGuide anchor</h3><p>Valuations start from PGA ValueGuide resale data — the official US PGA valuation tool, updated monthly across thousands of retailers.</p></div>
+        <div class="fc"><div class="fi">🇦🇺</div><h3>AU premium applied</h3><p>Australian sold prices run 15–25% above FX-converted international prices. This is built into every calculation automatically.</p></div>
+        <div class="fc"><div class="fi">🔧</div><h3>Customisation factored</h3><p>Aftermarket shafts, premium grips, length modifications — all affect value significantly and are accounted for explicitly.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="how-sec">
+    <div class="how-in">
+      <div class="ey" style="color:var(--cyan-light)">Four steps</div>
+      <h2 class="stl" style="color:#fff">Select. Condition. Customise. Done.</h2>
+      <p class="ssu" style="color:rgba(255,255,255,.65);margin:0 auto 0">Exact club identification through structured dropdowns. No typing required.</p>
+      <div class="steps">
+        <div class="step"><div class="snum">1</div><h4>Select brand & type</h4><p>Choose from the most popular AU brands and club categories</p></div>
+        <div class="step"><div class="snum">2</div><h4>Choose model & year</h4><p>Exact SKU-level model selection — the dropdown populates based on your brand and type</p></div>
+        <div class="step"><div class="snum">3</div><h4>Rate condition</h4><p>Four clear condition grades aligned to PGA ValueGuide standards</p></div>
+        <div class="step"><div class="snum">4</div><h4>Add customisations</h4><p>Shaft, grips, length, extras — your AU private sale range is calculated instantly</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="sec" style="background:var(--white);border-top:1px solid var(--border)">
+    <div class="si2">
+      <div class="ey">Model price guides</div>
+      <h2 class="stl">AU price guides by club model</h2>
+      <p class="ssu">Exact AU$ private sale ranges for Australia's most traded clubs — by condition, variant and customisation.</p>
+      <div class="fg" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))">
+        <a href="/taylormade-stealth-driver-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Stealth Driver</h3><p>Good: $400–$520</p></a>
+        <a href="/taylormade-stealth-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Stealth Irons</h3><p>Good: $600–$750</p></a>
+        <a href="/taylormade-stealth-2-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Stealth 2 Irons</h3><p>Good: $730–$900</p></a>
+        <a href="/taylormade-p790-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>P790 Irons</h3><p>Good: $1,050–$1,300</p></a>
+        <a href="/ping-g425-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Ping G425 Irons</h3><p>Good: $750–$900</p></a>
+        <a href="/ping-g430-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Ping G430 Irons</h3><p>Good: $860–$1,050</p></a>
+        <a href="/ping-i230-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Ping i230 Irons</h3><p>Good: $1,000–$1,200</p></a>
+        <a href="/ping-blueprint-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Ping Blueprint Irons</h3><p>Good: $1,200–$1,450</p></a>
+        <a href="/titleist-ap2-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Titleist AP2 Irons</h3><p>Good: $440–$900</p></a>
+        <a href="/titleist-t100-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Titleist T100 Irons</h3><p>Good: $1,100–$1,400</p></a>
+        <a href="/titleist-vokey-sm9-wedge-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Vokey SM9 Wedges</h3><p>Good: $155–$200</p></a>
+        <a href="/titleist-vokey-sm8-wedge-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Vokey SM8 Wedges</h3><p>Good: $125–$160</p></a>
+        <a href="/mizuno-jpx923-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>JPX 923 Irons</h3><p>Good: $880–$1,100</p></a>
+        <a href="/scotty-cameron-newport-2-putter-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Scotty Newport 2</h3><p>Good: $520–$650</p></a>
+        <a href="/callaway-paradym-irons-price-australia.html" style="text-decoration:none" class="fc"><div class="fi" style="font-size:.9rem;width:32px;height:32px">🏌️</div><h3>Paradym Irons</h3><p>Good: $800–$1,000</p></a>
+      </div>
+    </div>
+  </div>
+  <div class="csec">
+    <div class="cin">
+      <div class="ctxt">
+        <div class="ey" style="color:var(--cyan-light)">Coaching</div>
+        <h2 class="stl" style="color:#fff">Take your game further</h2>
+        <p>Knowing what your clubs are worth is just the start. The right coaching makes the difference between choosing gear that fits your game and gear that fights it.</p>
+        <p>Scott Spence is a PGA Professional and Teaching Professional at Kooindah Waters on the Central Coast — in-person lessons, on-course playing lessons and group programmes, plus online video coaching Australia-wide through Skillest.</p>
+      </div>
+      <div class="ccard">
+        <div class="chead"><div class="cbadge">SS</div><div><div class="cname">Scott Spence</div><div class="crole">Your Golf Coach · PGA Professional</div></div></div>
+        <div class="cfts">
+          <div class="cfi"><div class="cfd"></div><span>Individual & on-course lessons at Kooindah Waters</span></div>
+          <div class="cfi"><div class="cfd"></div><span>Group clinics, junior, ladies & beginner programmes</span></div>
+          <div class="cfi"><div class="cfd"></div><span>Online video swing analysis via Skillest</span></div>
+          <div class="cfi"><div class="cfd"></div><span>All levels — juniors to scratch</span></div>
+        </div>
+        <a class="skbtn" href="/">Explore coaching →</a>
+        <div class="sknote">skillest.com/@scottypro</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec" style="padding-bottom:5rem">
+    <div class="si2" style="text-align:center">
+      <div class="ey">Free tool</div>
+      <h2 class="stl" style="margin:0 auto .5rem">Ready to find out what your clubs are worth?</h2>
+      <p class="ssu" style="margin:0 auto 2rem">Free, takes under a minute, no email required.</p>
+      <button class="btn btn-navy" onclick="sp('tool')">Use the valuation tool →</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOOL -->
+<div class="page" id="page-tool">
+  <div class="tw">
+    <div class="ph">
+      <h1>Club valuation tool</h1>
+      <p>Select your exact club from the dropdowns — the model list updates based on brand and type</p>
+      <div id="freeCounter" style="display:inline-flex;align-items:center;gap:.5rem;margin-top:.6rem;font-size:.8rem;color:var(--muted)"></div>
+    </div>
+    <div class="tc">
+      <div class="ct">Select your club</div>
+      <div class="cs">Start with brand and type — the model dropdown will populate automatically</div>
+
+      <div class="sku-grid" style="margin-bottom:.85rem">
+        <div class="gg">
+          <label class="fl">Brand</label>
+          <select id="selBrand" onchange="updateModels()">
+            <option value="">Select brand…</option>
+            <option value="callaway">Callaway</option>
+            <option value="cleveland">Cleveland</option>
+            <option value="cobra">Cobra</option>
+            <option value="honma">Honma</option>
+            <option value="mizuno">Mizuno</option>
+            <option value="odyssey">Odyssey</option>
+            <option value="ping">Ping</option>
+            <option value="pxg">PXG</option>
+            <option value="scotty">Scotty Cameron</option>
+            <option value="srixon">Srixon</option>
+            <option value="taylormade">TaylorMade</option>
+            <option value="titleist">Titleist</option>
+            <option value="wilson">Wilson Staff</option>
+            <option value="xxio">XXIO</option>
+          </select>
+        </div>
+        <div class="gg">
+          <label class="fl">Club type</label>
+          <select id="selType" onchange="updateModels()">
+            <option value="">Select type…</option>
+            <option value="driver">Driver</option>
+            <option value="fairway">Fairway wood</option>
+            <option value="hybrid">Hybrid / utility iron</option>
+            <option value="irons">Iron set</option>
+            <option value="wedge">Wedge</option>
+            <option value="putter">Putter</option>
+          </select>
+        </div>
+        <div class="gg">
+          <label class="fl">Model</label>
+          <select id="selModel" disabled>
+            <option value="">Select brand &amp; type first…</option>
+          </select>
+        </div>
+        <div class="gg">
+          <label class="fl">Year</label>
+          <select id="selYear" disabled>
+            <option value="">Select model first…</option>
+          </select>
+        </div>
+      </div>
+
+      <label class="fallback-toggle">
+        <input type="checkbox" id="fallbackToggle" onchange="toggleFallback()">
+        <span class="fallback-toggle-label">Can't find your club? Enter it manually →</span>
+      </label>
+      <div class="fallback-panel" id="fallbackPanel">
+        <p>Describe your club in plain English — the AI will identify it and calculate a value. Dropdowns above will be ignored when this is filled in.</p>
+        <input type="text" id="manualDesc" placeholder="e.g. Titleist MB 710 irons 4-PW stiff steel, Miura CB-301 irons, Bettinardi BB1 putter 34 inch…">
+      </div>
+
+      <div style="margin-bottom:1.1rem;margin-top:1.1rem">
+        <label class="fl">Condition</label>
+        <div class="crow">
+          <button class="cb" onclick="sc(this,1)">Like new<small>1–3 rounds</small></button>
+          <button class="cb" onclick="sc(this,2)">Good<small>Light use</small></button>
+          <button class="cb" onclick="sc(this,3)">Average<small>Normal wear</small></button>
+          <button class="cb" onclick="sc(this,4)">Worn<small>Heavy use</small></button>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.1rem">
+        <label class="fl">Dexterity</label>
+        <div class="dex-row">
+          <button class="dex-btn sel" id="dexRH" onclick="setDex('RH')">Right-handed</button>
+          <button class="dex-btn" id="dexLH" onclick="setDex('LH')">Left-handed <span style="font-size:.7rem;font-weight:400;opacity:.7">— smaller AU market</span></button>
+        </div>
+      </div>
+
+      <div style="padding-top:1.1rem;border-top:1px solid var(--border)">
+        <label class="fl" style="margin-bottom:.6rem">Customisations <span style="font-size:.68rem;font-weight:400;color:var(--muted);text-transform:none;letter-spacing:0">— significantly affect value</span></label>
+        <div class="cust-grid">
+          <div class="cust-item">
+            <label class="fl">Shaft</label>
+            <select id="shaftType">
+              <option value="stock">Stock / OEM shaft</option>
+              <option value="premium-x">Premium aftermarket X-flex (Modus 120X, DG Tour X, Ventus Black…)</option>
+              <option value="premium-s">Premium aftermarket S-flex (Modus 120S, DG X100, Ventus Blue…)</option>
+              <option value="budget-after">Budget aftermarket replacement</option>
+              <option value="cut-short">Cut short / non-standard length</option>
+            </select>
+          </div>
+          <div class="cust-item">
+            <label class="fl">Grips</label>
+            <select id="gripType">
+              <option value="original-good">Original grips — good condition</option>
+              <option value="premium-new">Premium new grips (Golf Pride MCC, Lamkin, Winn…)</option>
+              <option value="regripped-std">Recently re-gripped — standard grips</option>
+              <option value="original-worn">Original grips — worn</option>
+              <option value="needs-regrip">Needs re-gripping</option>
+            </select>
+          </div>
+          <div class="cust-item">
+            <label class="fl">Length</label>
+            <select id="lengthMod">
+              <option value="standard">Standard length</option>
+              <option value="plus-quarter">+¼ inch long</option>
+              <option value="plus-half">+½ inch long</option>
+              <option value="short">Cut short</option>
+            </select>
+          </div>
+          <div class="cust-item">
+            <label class="fl">Extras</label>
+            <select id="otherMod">
+              <option value="none">None</option>
+              <option value="headcover">Headcover included</option>
+              <option value="no-headcover">No headcover (driver / wood / putter)</option>
+              <option value="matching-set">Part of matched / fitted set</option>
+              <option value="loft-adjusted">Loft / lie adjusted by pro</option>
+            </select>
+          </div>
+        </div>
+        <div class="extras-row" style="margin-top:.75rem">
+          <label><input type="checkbox" id="chkReceipt"> Original receipt</label>
+          <label><input type="checkbox" id="chkBox"> Original box</label>
+          <label><input type="checkbox" id="chkTools"> Wrench / tool included</label>
+        </div>
+      </div>
+      <div class="err-box" id="errBox">Please select a brand, type, model, year and condition before calculating.</div>
+
+      <div style="margin-top:1.25rem;padding-top:1.1rem;border-top:1px solid var(--border)">
+        <label class="fl">What price do you need?</label>
+        <div class="vtype-row">
+          <button class="vtype-btn sel" id="vtPrivate" onclick="setVtype('private')">
+            Private sale
+            <small>What you can achieve selling on Facebook Marketplace, eBay or Golf Clubs For Sale AU</small>
+          </button>
+          <button class="vtype-btn" id="vtTradein" onclick="setVtype('tradein')">
+            Trade-in / dealer
+            <small>What a pro shop or used dealer will pay you — instant, no hassle, lower price</small>
+          </button>
+        </div>
+      </div>
+
+      <button class="calc" id="calcBtn" onclick="doCalc()">Calculate AU$ value →</button>
+    </div>
+
+    <div class="loading-state" id="loadingState">
+      <div class="spinner"></div>
+      <p id="loadingMsg">Calculating your AU value range…</p>
+    </div>
+
+    <div class="rc" id="rc">
+      <div class="re" id="rMode">Estimated AU$ private sale range</div>
+      <div class="rrange"><span class="rv" id="rFrom">$0</span><span class="rsep">–</span><span class="rv" id="rTo">$0</span></div>
+      <div class="rsub" id="rSub">PGA ValueGuide anchored · AU market calibrated</div>
+
+      <div class="tradein-box" id="tradeinBox">
+        <div class="ti-label">Trade-in / dealer offer estimate</div>
+        <div class="ti-range" id="tiRange">$0 – $0</div>
+        <div class="ti-note">This is what a pro shop or used dealer would typically offer — 40–55% of private sale value. Instant, no photos, no negotiation, no waiting. Worth considering if you're upgrading at a pro shop or want a quick exit. Check with your local pro shop or AU used golf dealer for a real offer.</div>
+      </div>
+
+      <div class="method-box"><div class="mb-title">Calculation breakdown</div><div class="msteps" id="methodSteps"></div></div>
+      <div class="confrow"><div class="confbar"><div class="conffill" id="cFill"></div></div><div class="conflbl" id="cLbl">Confidence: —</div></div>
+      <div class="rtags" id="rTags"></div>
+      <hr class="rdiv">
+      <div class="rnote" id="rNote"></div>
+      <div class="rnudge">
+        <div class="rnudge-t">Not sure if this gear suits your swing? <strong>Scott Spence</strong> offers equipment fitting advice as part of online coaching.</div>
+        <a class="nb" onclick="gsk()">Book a lesson ↗</a>
+      </div>
+    </div>
+
+    <div class="sellc">
+      <div class="ct" style="color:#7A5800;font-size:1rem">Selling strategy</div>
+      <div class="cs" style="color:#8B6010">Once you have your range, here's how to price it</div>
+      <div class="sg">
+        <div class="si3"><div class="sil">List price</div><p>Set at the top of your range with "offers welcome" — room to negotiate without underselling.</p></div>
+        <div class="si3"><div class="sil">Quick sale</div><p>Price at mid-range and include postage — removes friction for the buyer.</p></div>
+        <div class="si3"><div class="sil">Best platforms</div><p>Facebook Marketplace (fast, local), Golf Clubs For Sale Australia (targeted), eBay AU (broadest reach).</p></div>
+        <div class="si3"><div class="sil">Photography tip</div><p>Natural light, clean surface. Show face, sole, hosel, shaft label and grip. Be honest about wear.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GUIDE -->
+<div class="page" id="page-guide">
+  <div class="gw">
+    <div class="ghe">
+      <h1>The Australian Used Golf Club Pricing Guide</h1>
+      <p>The honest guide to buying and selling second-hand golf gear in Australia — written by a PGA professional who has observed the market firsthand.</p>
+    </div>
+    <div class="gc">
+      <div class="ghd"><span class="gnum">1</span>The core insight: AU prices are genuinely higher</div>
+      <p>Australian used golf prices run 15–25% above FX-converted US and UK equivalent prices. This is a real and consistent market dynamic driven by lower supply, higher import costs on new equipment, and limited price transparency — not sellers being unrealistic.</p>
+      <p>Understanding this is the key to pricing accurately. Both buyers and sellers frequently underestimate this premium, which leads to either underselling (frustrating) or pricing too high and sitting on gear for months (also frustrating).</p>
+      <div class="tbox"><div class="tlbl">How this tool uses it</div><p>Every calculation starts from PGA ValueGuide US resale data, converts to AUD, then applies the 15–25% AU premium automatically before adjusting for condition and customisation.</p></div>
+    </div>
+    <div class="gc">
+      <div class="ghd"><span class="gnum">2</span>The valuation methodology</div>
+      <p>This tool uses a three-source triangulation approach:</p>
+      <div class="mg">
+        <div class="mk"><strong>🇺🇸 PGA ValueGuide (primary anchor)</strong><span>The official US PGA valuation tool. Based on actual resale data from thousands of retailers, updated monthly. We use the resale value — not trade-in, which is 40–50% lower and reflects what a dealer pays you, not what you should sell for privately.</span></div>
+        <div class="mk"><strong>🇬🇧 Golfbidder UK (cross-reference)</strong><span>Europe's largest used golf dealer with real sold-price data. Used as a second international benchmark. Their price × 1.95 converts to an AU equivalent, then the AU premium is applied on top.</span></div>
+        <div class="mk"><strong>🇦🇺 AU dealer data (ceiling)</strong><span>Australian retail used pricing from major local dealers provides an AU-specific ceiling. Your private sale price should sit 10–15% below the equivalent dealer retail price for the same model and condition.</span></div>
+        <div class="mk"><strong>Your private sale target</strong><span>Triangulate all three, apply the AU premium to international references, adjust for condition and customisations, and you have a defensible, realistic price range for any private sale in Australia.</span></div>
+      </div>
+      <div class="formula-box">PGA ValueGuide USD resale <em>× 1.55</em> (FX) <em>× 1.15–1.25</em> (AU premium) <em>± customisation</em><small>Example: PGA ValueGuide shows $500 USD → $775 AUD → AU range = $890–$970 before condition and customisation adjustments</small></div>
+    </div>
+    <div class="gc">
+      <div class="ghd"><span class="gnum">3</span>Customisation — the most overlooked value driver</div>
+      <table class="it">
+        <thead><tr><th>Customisation</th><th>Impact</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Premium aftermarket shaft (X-flex)</td><td><span class="plus">+$60–120 per club</span></td><td>Modus 120X, DG Tour X, Ventus Black — must have intact cosmetics</td></tr>
+          <tr><td>Premium aftermarket shaft (S-flex)</td><td><span class="plus">+$40–80 per club</span></td><td>Modus 120S, DG X100, Ventus Blue/Red etc.</td></tr>
+          <tr><td>Premium new grips</td><td><span class="plus">+$100–200 per set</span></td><td>Golf Pride MCC, Lamkin, Winn — saves buyer re-gripping cost</td></tr>
+          <tr><td>+¼ inch length</td><td><span class="plus">+$30–60 per set</span></td><td>Easier to cut down than extend — buyers value flexibility</td></tr>
+          <tr><td>Original headcover</td><td><span class="plus">+$20–60</span></td><td>Especially valuable for putters and drivers</td></tr>
+          <tr><td>Original receipt</td><td><span class="plus">+$30–50</span></td><td>Builds buyer confidence for high-value clubs</td></tr>
+          <tr><td>Cut short / non-standard</td><td><span class="minus">−$50–150</span></td><td>Limits buyer pool significantly</td></tr>
+          <tr><td>Worn / needs re-gripping</td><td><span class="minus">−$80–200 per set</span></td><td>Buyers factor in $150–200 re-gripping cost at a pro shop</td></tr>
+          <tr><td>Budget aftermarket shaft</td><td><span class="minus">−$20–60</span></td><td>Unknown shafts reduce buyer confidence and perceived value</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="gc">
+      <div class="ghd"><span class="gnum">4</span>Condition grading</div>
+      <table class="it">
+        <thead><tr><th>Grade</th><th>Description</th><th>Typical % of AU reference price</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Like new</strong></td><td>1–3 rounds, no visible wear, original grip</td><td>78–90%</td></tr>
+          <tr><td><strong>Good</strong></td><td>Light bag and face wear, clean grooves</td><td>62–76%</td></tr>
+          <tr><td><strong>Average</strong></td><td>Normal play wear, may have been re-gripped</td><td>48–61%</td></tr>
+          <tr><td><strong>Worn</strong></td><td>Heavy use, groove wear, cosmetic marks</td><td>28–46%</td></tr>
+        </tbody>
+      </table>
+      <div class="tbox"><div class="tlbl">Seller tip</div><p>Buyers discount aggressively for surprises. Under-promise and over-deliver on condition — a buyer who finds the club better than described leaves great feedback and comes back.</p></div>
+    </div>
+    <div class="gc">
+      <div class="ghd"><span class="gnum">5</span>Depreciation by club category</div>
+      <p><strong>Drivers and fairway woods</strong> depreciate fastest — typically 40–50% in year one as new models release every 12–18 months. A 2-year-old driver is worth roughly 35–45% of RRP regardless of condition.</p>
+      <p><strong>Irons</strong> hold value better, especially forged players' sets (Mizuno MP/JPX, Titleist MB/CB, Ping Blueprint, Srixon ZX Forged). These retain 50–70% of RRP for 3–4 years. Game-improvement sets depreciate faster due to high volume competition.</p>
+      <p><strong>Wedges</strong> — condition beats age every time. Groove wear dramatically affects value. A worn SM9 can be worth less than a pristine SM8.</p>
+      <p><strong>Putters</strong> are the most stable category. A Scotty Cameron in good condition holds 65–85% of RRP almost indefinitely. Limited editions can appreciate.</p>
+      <p><strong>Shafts (pulls)</strong> — premium options (Modus 120, DG X100/Tour X, Fujikura Ventus) in X or S-flex retain 55–70% of new value when cleanly pulled with intact cosmetics. Bundled matched sets command a premium over individual pulls.</p>
+    </div>
+    <div class="gc">
+      <div class="ghd"><span class="gnum">6</span>Red flags when buying</div>
+      <p>Watch for: listings with no sole or face photos, vague "barely used" claims with no supporting detail, refusal to use PayPal Goods and Services (a common scam signal), sellers who can't name where they bought the club, and aftermarket shaft claims without a clear photo of the shaft label.</p>
+      <p>For purchases over $500, always ask for a receipt or serial number. Titleist, Ping, and some TaylorMade models have verification systems that can confirm authenticity and flag stolen equipment.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SOLD PRICES -->
+<div class="page" id="page-sold">
+  <div class="tw">
+    <div class="ph">
+      <h1>Submit a sold price</h1>
+      <p>Sold a club recently? Tell us what it went for — you'll help make YourGolf valuations more accurate for every Australian golfer.</p>
+    </div>
+
+    <div class="tc" style="margin-bottom:1.4rem">
+      <div class="ct">Why this matters</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-top:.85rem">
+        <div style="background:var(--cyan-pale);border-radius:var(--rs);padding:.85rem 1rem">
+          <div style="font-size:.7rem;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem">The problem</div>
+          <p style="font-size:.85rem;color:#0A4D61;line-height:1.65">YourGolf valuations are anchored to US and UK pricing data. Real AU sold prices are the missing piece — and only Australian golfers have them.</p>
+        </div>
+        <div style="background:var(--cyan-pale);border-radius:var(--rs);padding:.85rem 1rem">
+          <div style="font-size:.7rem;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem">How you help</div>
+          <p style="font-size:.85rem;color:#0A4D61;line-height:1.65">Every sold price submitted makes the tool more accurate for the next person. It takes 60 seconds and directly improves AU golf pricing transparency.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tc" id="soldForm">
+      <div class="ct">What did you sell?</div>
+      <div class="cs">All fields are used to calibrate valuations — the more detail the better</div>
+
+      <div class="sku-grid" style="margin-bottom:.85rem">
+        <div class="gg">
+          <label class="fl">Brand</label>
+          <select id="soldBrand" onchange="updateSoldModels()">
+            <option value="">Select brand…</option>
+            <option value="callaway">Callaway</option>
+            <option value="cleveland">Cleveland</option>
+            <option value="cobra">Cobra</option>
+            <option value="honma">Honma</option>
+            <option value="mizuno">Mizuno</option>
+            <option value="odyssey">Odyssey</option>
+            <option value="ping">Ping</option>
+            <option value="pxg">PXG</option>
+            <option value="scotty">Scotty Cameron</option>
+            <option value="srixon">Srixon</option>
+            <option value="taylormade">TaylorMade</option>
+            <option value="titleist">Titleist</option>
+            <option value="wilson">Wilson Staff</option>
+            <option value="xxio">XXIO</option>
+            <option value="other">Other brand</option>
+          </select>
+        </div>
+        <div class="gg">
+          <label class="fl">Club type</label>
+          <select id="soldType" onchange="updateSoldModels()">
+            <option value="">Select type…</option>
+            <option value="driver">Driver</option>
+            <option value="fairway">Fairway wood</option>
+            <option value="hybrid">Hybrid / utility iron</option>
+            <option value="irons">Iron set</option>
+            <option value="wedge">Wedge</option>
+            <option value="putter">Putter</option>
+            <option value="shaft">Shaft (pull)</option>
+          </select>
+        </div>
+        <div class="gg">
+          <label class="fl">Model <span style="font-size:.68rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)">— or describe below</span></label>
+          <select id="soldModel" disabled>
+            <option value="">Select brand & type first…</option>
+          </select>
+        </div>
+        <div class="gg">
+          <label class="fl">Year</label>
+          <select id="soldYear" disabled>
+            <option value="">Select model first…</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-bottom:.85rem">
+        <label class="fl">Can't find your club? Describe it</label>
+        <input type="text" id="soldDesc" placeholder="e.g. Mizuno MP-20 HMB irons 4-PW, Bettinardi BB1 putter 34 inch…" style="margin-top:.35rem">
+      </div>
+
+      <div style="margin-bottom:1.1rem">
+        <label class="fl">Condition when sold</label>
+        <div class="crow">
+          <button class="cb" onclick="setSoldCond(this,1)">Like new<small>1–3 rounds</small></button>
+          <button class="cb" onclick="setSoldCond(this,2)">Good<small>Light use</small></button>
+          <button class="cb" onclick="setSoldCond(this,3)">Average<small>Normal wear</small></button>
+          <button class="cb" onclick="setSoldCond(this,4)">Worn<small>Heavy use</small></button>
+        </div>
+      </div>
+
+      <div class="cust-grid" style="margin-bottom:1.1rem">
+        <div class="cust-item">
+          <label class="fl">Sold price (AU$)</label>
+          <input type="number" id="soldPrice" placeholder="e.g. 850" min="0" max="50000" style="margin-top:.35rem">
+        </div>
+        <div class="cust-item">
+          <label class="fl">Where did you sell it?</label>
+          <select id="soldPlatform" style="margin-top:.35rem">
+            <option value="">Select platform…</option>
+            <option value="facebook">Facebook Marketplace</option>
+            <option value="golfclubsforsale">Golf Clubs For Sale Australia</option>
+            <option value="ebay">eBay Australia</option>
+            <option value="proshop">Pro shop / dealer trade-in</option>
+            <option value="gumtree">Gumtree</option>
+            <option value="direct">Direct / word of mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="cust-item">
+          <label class="fl">Approx. when did it sell?</label>
+          <select id="soldWhen" style="margin-top:.35rem">
+            <option value="">Select…</option>
+            <option value="this-week">This week</option>
+            <option value="this-month">This month</option>
+            <option value="1-3months">1–3 months ago</option>
+            <option value="3-6months">3–6 months ago</option>
+            <option value="6-12months">6–12 months ago</option>
+          </select>
+        </div>
+        <div class="cust-item">
+          <label class="fl">Dexterity</label>
+          <select id="soldDex" style="margin-top:.35rem">
+            <option value="RH">Right-handed</option>
+            <option value="LH">Left-handed</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.1rem">
+        <label class="fl">Shaft <span style="font-size:.68rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)">— optional but helpful</span></label>
+        <select id="soldShaft" style="margin-top:.35rem;width:100%">
+          <option value="stock">Stock / OEM shaft</option>
+          <option value="premium-x">Premium aftermarket X-flex (Modus 120X, DG Tour X…)</option>
+          <option value="premium-s">Premium aftermarket S-flex (Modus 120S, DG X100…)</option>
+          <option value="budget-after">Budget aftermarket replacement</option>
+          <option value="unknown">Unknown aftermarket</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom:1.1rem">
+        <label class="fl">Anything else worth noting? <span style="font-size:.68rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)">— optional</span></label>
+        <input type="text" id="soldNotes" placeholder="e.g. sold with headcover, re-gripped before sale, original receipt included…" style="margin-top:.35rem">
+      </div>
+
+      <div class="err-box" id="soldErrBox"></div>
+      <button class="calc" id="soldSubmitBtn" onclick="submitSoldPrice()" style="margin-top:1rem">Submit sold price →</button>
+    </div>
+
+    <div id="soldSuccess" style="display:none;background:var(--navy);color:#fff;border-radius:var(--r);padding:2rem;text-align:center;margin-bottom:1.4rem">
+      <div style="font-size:2rem;margin-bottom:.75rem">✓</div>
+      <div style="font-family:var(--fd);font-size:1.3rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:.5rem">Thanks — sold price submitted</div>
+      <p style="color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.7;max-width:420px;margin:0 auto 1.25rem">Your data goes directly into improving YourGolf's AU valuations. Every submission makes the tool more accurate for the next golfer.</p>
+      <button onclick="resetSoldForm()" style="background:var(--cyan);color:#fff;border:none;border-radius:var(--rs);padding:.6rem 1.25rem;font-family:var(--fd);font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;cursor:pointer">Submit another →</button>
+    </div>
+
+    <div class="tc" style="background:var(--cream)">
+      <div class="ct" style="font-size:1rem">What happens to your data</div>
+      <p style="font-size:.87rem;color:var(--muted);line-height:1.75;margin-top:.5rem">Submitted sold prices are reviewed by Scott Spence and used to calibrate YourGolf's AU valuation ranges over time. We never share individual submissions publicly or attribute prices to specific sellers. Your email is not required to submit a sold price.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="page-about">
+  <div class="aw">
+    <h1>About YourGolf</h1>
+    <p class="asub">yourgolf.com.au — Australia's most transparent used golf club valuation tool</p>
+    <div class="acccard">
+      <div class="acbadge">SS</div>
+      <div class="aci">
+        <h3>Scott Spence</h3>
+        <div class="ar">PGA Professional · Your Golf Coach</div>
+        <p>Scott Spence is an Australian PGA professional coach with years of experience helping golfers at every level improve their game and make smarter equipment decisions. He's the expert behind the YourGolf methodology and pricing guide.</p>
+        <p>Scott delivers online coaching through Skillest — the world's leading video golf coaching platform — making professional instruction available to golfers anywhere in Australia.</p>
+        <a class="sklink" onclick="gsk()">View profile on Skillest ↗</a>
+      </div>
+    </div>
+    <div class="acard"><h3>The methodology</h3><p>YourGolf uses PGA ValueGuide US resale data as its primary anchor — the most credible and regularly updated source of used golf club values available publicly. International prices are converted to AUD and adjusted with a 15–25% AU market premium based on observed Australian sold prices. Customisation adjustments and condition multipliers are applied on top. The result is a private sale range calibrated specifically to how the Australian market prices clubs.</p></div>
+    <div class="acard"><h3>What's coming next</h3><p>A regularly updated AU sold-price database sourced from Australian classifieds, real-time inventory integration with AU dealers, and a dedicated shaft valuation module. Get in touch if you'd like to be notified when these go live or want to contribute sold-price data.</p></div>
+    <div class="acard"><h3>Disclaimer</h3><p>YourGolf provides estimated price ranges for informational purposes only. We are not affiliated with the PGA of America or PGA ValueGuide. Values are based on publicly available market data and observed AU market pricing. Always research live listings before buying or selling. We make no guarantee of accuracy.</p></div>
+  </div>
+</div>
+
+<!-- SEO content — visible to search engines, hidden from users viewing the SPA -->
+<div style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap" aria-hidden="true">
+  <h1>Used Golf Club Valuation Tool — Australia</h1>
+  <h2>What are my golf clubs worth in Australia?</h2>
+  <p>YourGolf is a free used golf club valuation tool built specifically for the Australian market. Select your exact club from over 200 popular models across 14 brands, choose your condition and customisations, and get a realistic AU$ private sale range based on PGA ValueGuide US resale data, Golfbidder UK pricing, and observed Australian market premiums.</p>
+  <h2>How to value used golf clubs in Australia</h2>
+  <p>Australian used golf prices are 15–25% higher than equivalent US and UK prices after currency conversion, due to lower supply, higher import costs, and limited price transparency. Use PGA ValueGuide resale values (not trade-in values) as your US anchor, convert at 1.55 AUD/USD, then apply the AU premium to arrive at a realistic local price.</p>
+  <h2>Where to sell used golf clubs in Australia</h2>
+  <p>Facebook Marketplace and the Golf Clubs For Sale Australia Facebook group are the fastest and most popular platforms for selling used golf clubs in Australia. eBay Australia offers the broadest national reach. For high-value or niche clubs, patience on Facebook typically achieves the best price.</p>
+  <h2>About YourGolf</h2>
+  <p>YourGolf is built and maintained by Scott Spence, an Australian PGA professional golf coach. Scott delivers online golf coaching through Skillest at skillest.com/@scottypro.</p>
+</div>
+
+<footer>
+  <span class="flogo">YourGolf</span>
+  <a href="/">Coaching</a> &nbsp;·&nbsp;
+  <a onclick="sp('tool')">Valuation tool</a> &nbsp;·&nbsp;
+  <a onclick="sp('guide')">Buyer's guide</a> &nbsp;·&nbsp;
+  <a href="https://instagram.com/yourgolfcoachscott" target="_blank" rel="noopener">Instagram ↗</a> &nbsp;·&nbsp;
+  <a onclick="gsk()">Book a lesson ↗</a>
+  <br>yourgolf.com.au &nbsp;·&nbsp; Built by Scott Spence, PGA Professional &nbsp;·&nbsp; Estimates only — always verify with live listings
+</footer>
+
+<!-- Hidden Netlify form for sold price submissions -->
+<form name="yourgolf-soldprices" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="club">
+  <input type="text" name="year">
+  <input type="text" name="condition">
+  <input type="text" name="price">
+  <input type="text" name="platform">
+  <input type="text" name="when">
+  <input type="text" name="dexterity">
+  <input type="text" name="shaft">
+  <input type="text" name="notes">
+  <input type="text" name="bot-field">
+</form>
+
+<!-- Hidden Netlify form — required for Netlify to detect and activate form collection -->
+<form name="yourgolf-signups" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="first-name">
+  <input type="email" name="email">
+  <input type="text" name="handicap">
+  <input type="text" name="bot-field">
+</form>
+
+<!-- EMAIL GATE MODAL -->
+<div class="gate-overlay" id="gateOverlay">
+  <div class="gate-modal">
+    <div class="gate-badge">Free valuations used</div>
+    <h2>You've used your 2 free valuations</h2>
+    <p>Enter your details below to unlock unlimited valuations — free forever. We'll also send you occasional tips on buying and selling golf gear in Australia.</p>
+    <div class="gate-form">
+      <div class="gate-field">
+        <label>First name</label>
+        <input type="text" id="gateName" placeholder="e.g. Scott" autocomplete="given-name">
+      </div>
+      <div class="gate-field">
+        <label>Email address</label>
+        <input type="email" id="gateEmail" placeholder="you@example.com" autocomplete="email">
+      </div>
+      <div class="gate-field">
+        <label>Handicap range</label>
+        <select id="gateHandicap">
+          <option value="">Select your handicap…</option>
+          <option value="scratch">Scratch or better</option>
+          <option value="1-5">1–5</option>
+          <option value="6-10">6–10</option>
+          <option value="11-18">11–18</option>
+          <option value="19-28">19–28</option>
+          <option value="28+">28+</option>
+          <option value="social">Social / no handicap</option>
+        </select>
+      </div>
+      <div class="gate-err" id="gateErr" style="display:none;font-size:.82rem;color:#9b1c1c;padding:.5rem .75rem;background:#fde8e8;border-radius:var(--rs)"></div>
+      <button class="gate-submit" onclick="submitGate()">Unlock unlimited valuations →</button>
+    </div>
+    <p class="gate-privacy">No spam, ever. Unsubscribe any time. Your details are used only to send you golf pricing tips and occasional coaching offers from Scott Spence.</p>
+  </div>
+</div>
+
+<script>
+var selCond=0,isLoading=false,selDex='RH',selVtype='private';
+
+function setVtype(val){
+  selVtype=val;
+  document.getElementById('vtPrivate').classList.toggle('sel',val==='private');
+  document.getElementById('vtTradein').classList.toggle('sel',val==='tradein');
+}
+
+function setDex(val){
+  selDex=val;
+  document.getElementById('dexRH').classList.toggle('sel',val==='RH');
+  document.getElementById('dexLH').classList.toggle('sel',val==='LH');
+}
+
+// Gate logic
+function isUnlocked(){
+  return localStorage.getItem('yg_unlocked')==='1';
+}
+function getValCount(){
+  return parseInt(localStorage.getItem('yg_count')||'0');
+}
+function incrementCount(){
+  localStorage.setItem('yg_count', getValCount()+1);
+}
+function showGate(){
+  document.getElementById('gateOverlay').classList.add('show');
+}
+async function submitGate(){
+  var name=document.getElementById('gateName').value.trim();
+  var email=document.getElementById('gateEmail').value.trim();
+  var hcp=document.getElementById('gateHandicap').value;
+  var errEl=document.getElementById('gateErr');
+  errEl.style.display='none';
+  if(!name){errEl.textContent='Please enter your first name.';errEl.style.display='block';return;}
+  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){errEl.textContent='Please enter a valid email address.';errEl.style.display='block';return;}
+  if(!hcp){errEl.textContent='Please select your handicap range.';errEl.style.display='block';return;}
+
+  // Disable button while submitting
+  var btn=document.querySelector('.gate-submit');
+  btn.disabled=true;
+  btn.textContent='Unlocking…';
+
+  // POST to Netlify Forms
+  try {
+    var formData=new URLSearchParams();
+    formData.append('form-name','yourgolf-signups');
+    formData.append('first-name',name);
+    formData.append('email',email);
+    formData.append('handicap',hcp);
+    formData.append('bot-field','');
+    await fetch('/',{
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:formData.toString()
+    });
+  } catch(e) {
+    // Silently fail — don't block the user if Netlify is unreachable
+    console.warn('Netlify form submission failed:',e);
+  }
+
+  // Always unlock locally regardless of network result
+  localStorage.setItem('yg_unlocked','1');
+  localStorage.setItem('yg_name',name);
+  localStorage.setItem('yg_email',email);
+  localStorage.setItem('yg_hcp',hcp);
+
+  document.getElementById('gateOverlay').classList.remove('show');
+  btn.disabled=false;
+  btn.textContent='Unlock unlimited valuations →';
+  runValuation();
+}
+
+// Club database — brand > type > [model, years]
+var CLUBS = {
+  callaway: {
+    driver: [
+      ['Paradym Ai Smoke', [2024]],
+      ['Paradym', [2023]],
+      ['Rogue ST Max', [2022]],
+      ['Epic Max', [2021]],
+      ['Epic Speed', [2021]],
+      ['Mavrik Max', [2020]],
+      ['Mavrik', [2020]],
+      ['Epic Flash Sub Zero', [2019]],
+      ['Epic Flash', [2019]],
+      ['Rogue', [2018]],
+      ['GBB Epic', [2017]],
+      ['XR 16', [2016]],
+    ],
+    fairway: [
+      ['Paradym Ai Smoke', [2024]],
+      ['Paradym', [2023]],
+      ['Rogue ST Max', [2022]],
+      ['Epic Max', [2021]],
+      ['Mavrik', [2020]],
+      ['Epic Flash', [2019]],
+      ['Rogue', [2018]],
+    ],
+    hybrid: [
+      ['Paradym Ai Smoke', [2024]],
+      ['Paradym', [2023]],
+      ['Rogue ST Max', [2022]],
+      ['Apex', [2021]],
+      ['Mavrik', [2020]],
+    ],
+    irons: [
+      ['Paradym Ai Smoke', [2024]],
+      ['Paradym', [2023]],
+      ['Rogue ST Max', [2022]],
+      ['Rogue ST Pro', [2022]],
+      ['Apex', [2021]],
+      ['Apex Pro', [2021]],
+      ['Mavrik Pro', [2020]],
+      ['Mavrik', [2020]],
+      ['Epic Forged', [2019]],
+      ['Apex CF 19', [2019]],
+      ['Rogue', [2018]],
+      ['Apex CF 18', [2018]],
+      ['Apex CF 16', [2016]],
+    ],
+    wedge: [
+      ['Jaws MD5', [2020]],
+      ['Jaws MD3', [2018]],
+    ],
+    putter: [
+      ['Odyssey — see Odyssey brand', []],
+    ]
+  },
+  cleveland: {
+    wedge: [
+      ['RTX 6 ZipCore', [2023]],
+      ['RTX ZipCore', [2021]],
+      ['RTX Full-Face 2', [2020]],
+      ['CBX 2', [2019]],
+      ['RTX 4', [2018]],
+      ['CBX', [2018]],
+      ['RTX 3', [2016]],
+    ],
+    irons: [
+      ['Launcher XL', [2022]],
+      ['Launcher HB Turbo', [2020]],
+      ['Launcher CBX', [2019]],
+    ],
+    driver: [
+      ['Launcher XL', [2022]],
+    ],
+    fairway: [
+      ['Launcher XL', [2022]],
+    ],
+    hybrid: [
+      ['Launcher XL', [2022]],
+    ],
+    putter: []
+  },
+  cobra: {
+    driver: [
+      ['Darkspeed X', [2024]],
+      ['Aerojet LS', [2023]],
+      ['Aerojet', [2023]],
+      ['LTDx', [2022]],
+      ['King Radspeed XD', [2021]],
+      ['King Speedzone', [2020]],
+      ['King F9', [2019]],
+    ],
+    fairway: [
+      ['Darkspeed', [2024]],
+      ['Aerojet', [2023]],
+      ['LTDx', [2022]],
+      ['King Speedzone', [2020]],
+    ],
+    hybrid: [
+      ['Darkspeed', [2024]],
+      ['Aerojet', [2023]],
+      ['King Radspeed', [2021]],
+    ],
+    irons: [
+      ['King Forged Tec X', [2023]],
+      ['King Forged Tec', [2022]],
+      ['King Radspeed', [2021]],
+      ['King Speedzone', [2020]],
+      ['King F9', [2019]],
+    ],
+    wedge: [
+      ['King MIM', [2020]],
+    ],
+    putter: []
+  },
+  honma: {
+    driver: [
+      ['TR20 460', [2020]],
+      ['TR20 440', [2020]],
+      ['TW747 455', [2019]],
+      ['TW747 460', [2019]],
+    ],
+    fairway: [
+      ['TR20', [2020]],
+      ['TW747', [2019]],
+    ],
+    hybrid: [
+      ['TR20', [2020]],
+    ],
+    irons: [
+      ['T//World GS', [2023]],
+      ['TR20', [2020]],
+      ['TW747 Vx', [2019]],
+      ['TW747', [2019]],
+      ['TW747P', [2019]],
+    ],
+    wedge: [],
+    putter: []
+  },
+  mizuno: {
+    driver: [
+      ['ST-X 230', [2023]],
+      ['ST-Z 230', [2023]],
+      ['ST-Z 220', [2022]],
+      ['ST-X 220', [2022]],
+      ['ST200', [2020]],
+    ],
+    fairway: [
+      ['ST-Z 230', [2023]],
+      ['ST-Z 220', [2022]],
+    ],
+    hybrid: [
+      ['CLK', [2020]],
+    ],
+    irons: [
+      ['Pro 245', [2023]],
+      ['Pro 243', [2023]],
+      ['Pro 241', [2023]],
+      ['JPX 923 Hot Metal', [2023]],
+      ['JPX 923 Forged', [2023]],
+      ['JPX 923 Tour', [2023]],
+      ['Pro 225', [2022]],
+      ['Pro 223', [2022]],
+      ['JPX 921 Hot Metal', [2021]],
+      ['JPX 921 Forged', [2021]],
+      ['JPX 921 Tour', [2021]],
+      ['MP-20 SEL', [2020]],
+      ['MP-20 HMB', [2020]],
+      ['MP-20', [2020]],
+      ['JPX 919 Hot Metal', [2019]],
+      ['JPX 919 Forged', [2019]],
+      ['MP-18 MMC', [2018]],
+      ['MP-18 SC', [2018]],
+      ['MP-18', [2018]],
+      ['JPX 900 Hot Metal', [2017]],
+      ['JPX 900 Forged', [2017]],
+      ['MP-54', [2015]],
+      ['MP-59', [2014]],
+    ],
+    wedge: [
+      ['T22', [2022]],
+      ['T20', [2020]],
+    ],
+    putter: []
+  },
+  odyssey: {
+    putter: [
+      ['Ai-One Milled', [2024]],
+      ['Ai-ONE', [2023]],
+      ['Tri-Hot 5K', [2022]],
+      ['White Hot OG', [2021]],
+      ['White Hot', [2020]],
+      ['Stroke Lab', [2019]],
+      ['Stroke Lab Seven', [2019]],
+      ['O-Works', [2017]],
+      ['Works', [2016]],
+    ],
+    driver: [], fairway: [], hybrid: [], irons: [], wedge: []
+  },
+  ping: {
+    driver: [
+      ['G430 Max 10K', [2024]],
+      ['G430 Max', [2023]],
+      ['G430 LST', [2023]],
+      ['G425 Max', [2021]],
+      ['G425 LST', [2021]],
+      ['G410 Plus', [2019]],
+      ['G410 LST', [2019]],
+      ['G400 Max', [2017]],
+      ['G400', [2016]],
+    ],
+    fairway: [
+      ['G430 Max', [2023]],
+      ['G425 Max', [2021]],
+      ['G410', [2019]],
+      ['G400', [2016]],
+    ],
+    hybrid: [
+      ['G430', [2023]],
+      ['G425', [2021]],
+      ['G410', [2019]],
+      ['G400', [2016]],
+    ],
+    irons: [
+      ['i230', [2022]],
+      ['Blueprint S', [2023]],
+      ['Blueprint', [2019]],
+      ['G430', [2023]],
+      ['G425', [2021]],
+      ['G410', [2019]],
+      ['G400', [2016]],
+      ['i210', [2018]],
+      ['i500', [2017]],
+      ['i Blade', [2016]],
+      ['G10', [2008]],
+    ],
+    wedge: [
+      ['ChipR', [2022]],
+      ['Glide 4.0', [2022]],
+      ['Glide 3.0', [2019]],
+    ],
+    putter: [
+      ['PLD Milled', [2023]],
+      ['Sigma 2', [2018]],
+      ['Vault', [2017]],
+    ]
+  },
+  pxg: {
+    driver: [
+      ['0311 GEN6', [2023]],
+      ['0311 GEN5', [2021]],
+      ['0211 GEN4', [2022]],
+    ],
+    fairway: [
+      ['0341 GEN5', [2021]],
+    ],
+    hybrid: [
+      ['0317 GEN5', [2021]],
+    ],
+    irons: [
+      ['0311 T GEN6', [2023]],
+      ['0311 P GEN6', [2023]],
+      ['0311 XP GEN6', [2023]],
+      ['0311 GEN5', [2021]],
+      ['0311 T GEN5', [2021]],
+      ['0311 P GEN5', [2021]],
+    ],
+    wedge: [
+      ['0311 Sugar Daddy II', [2021]],
+    ],
+    putter: [
+      ['0311 Darkness', [2022]],
+    ]
+  },
+  scotty: {
+    putter: [
+      ['Phantom X 12', [2023]],
+      ['Special Select Fastback 1.5', [2021]],
+      ['Special Select Newport 2', [2021]],
+      ['Special Select Newport', [2021]],
+      ['Phantom X 5', [2019]],
+      ['Phantom X 7', [2019]],
+      ['Select Newport 2', [2016]],
+      ['Select Fastback', [2016]],
+      ['Studio Select Newport 2', [2014]],
+      ['GoLo 5', [2013]],
+      ['California Del Mar', [2012]],
+    ],
+    driver: [], fairway: [], hybrid: [], irons: [], wedge: []
+  },
+  srixon: {
+    driver: [
+      ['ZX5 Mk II', [2023]],
+      ['ZX7 Mk II', [2023]],
+      ['ZX5', [2021]],
+      ['ZX7', [2021]],
+      ['Z785', [2018]],
+    ],
+    fairway: [
+      ['ZX Mk II', [2023]],
+      ['ZX', [2021]],
+    ],
+    hybrid: [
+      ['ZX', [2021]],
+    ],
+    irons: [
+      ['ZX5 Mk II', [2023]],
+      ['ZX7 Mk II', [2023]],
+      ['ZX4 Mk II', [2023]],
+      ['ZX5', [2021]],
+      ['ZX7', [2021]],
+      ['Z785', [2018]],
+      ['Z965', [2018]],
+      ['Z765', [2018]],
+    ],
+    wedge: [
+      ['ZX', [2022]],
+    ],
+    putter: []
+  },
+  taylormade: {
+    driver: [
+      ['Qi35 Max', [2025]],
+      ['Qi10 Max', [2024]],
+      ['Qi10 LS', [2024]],
+      ['Qi10', [2024]],
+      ['Stealth 2 Plus', [2023]],
+      ['Stealth 2', [2023]],
+      ['Stealth Plus', [2022]],
+      ['Stealth', [2022]],
+      ['SIM2 Max', [2021]],
+      ['SIM2 Max D', [2021]],
+      ['SIM2', [2021]],
+      ['SIM Max', [2020]],
+      ['SIM', [2020]],
+      ['M6', [2019]],
+      ['M5', [2019]],
+      ['M4', [2018]],
+      ['M3', [2018]],
+      ['M2', [2017]],
+      ['M1', [2017]],
+    ],
+    fairway: [
+      ['Qi35', [2025]],
+      ['Qi10', [2024]],
+      ['Stealth 2', [2023]],
+      ['Stealth', [2022]],
+      ['SIM2 Max', [2021]],
+      ['SIM Max', [2020]],
+      ['M6', [2019]],
+    ],
+    hybrid: [
+      ['Qi35', [2025]],
+      ['Qi10', [2024]],
+      ['Stealth 2', [2023]],
+      ['Stealth', [2022]],
+      ['SIM2 Rescue', [2021]],
+      ['SIM Rescue', [2020]],
+      ['M6 Rescue', [2019]],
+    ],
+    irons: [
+      ['Qi35', [2025]],
+      ['Qi10', [2024]],
+      ['Stealth 2 HD', [2023]],
+      ['Stealth 2', [2023]],
+      ['Stealth', [2022]],
+      ['P790 (2023)', [2023]],
+      ['P770 (2023)', [2023]],
+      ['P7MC (2023)', [2023]],
+      ['P7MB (2023)', [2023]],
+      ['SIM2 Max', [2021]],
+      ['P790 (2021)', [2021]],
+      ['P770 (2021)', [2021]],
+      ['SIM Max', [2020]],
+      ['P790 (2019)', [2019]],
+      ['M6', [2019]],
+      ['M5', [2019]],
+      ['P790 (2017)', [2017]],
+      ['M2 (2017)', [2017]],
+    ],
+    wedge: [
+      ['MG4', [2024]],
+      ['MG3', [2022]],
+      ['Hi-Toe Raw', [2020]],
+      ['MG2', [2020]],
+      ['Hi-Toe', [2019]],
+    ],
+    putter: [
+      ['Spider Tour X', [2024]],
+      ['Spider GT', [2022]],
+      ['Spider EX', [2021]],
+      ['Spider X', [2019]],
+      ['TP Hydro Blast', [2021]],
+    ]
+  },
+  titleist: {
+    driver: [
+      ['TSR4', [2023]],
+      ['TSR3', [2023]],
+      ['TSR2', [2023]],
+      ['TSi3', [2021]],
+      ['TSi2', [2021]],
+      ['TS3', [2018]],
+      ['TS2', [2018]],
+      ['917 D3', [2016]],
+      ['917 D2', [2016]],
+    ],
+    fairway: [
+      ['TSR3', [2023]],
+      ['TSR2', [2023]],
+      ['TSi3', [2021]],
+      ['TSi2', [2021]],
+      ['TS3', [2018]],
+    ],
+    hybrid: [
+      ['TSR2', [2023]],
+      ['TSi2', [2021]],
+      ['TS2', [2018]],
+    ],
+    irons: [
+      ['T100S (2023)', [2023]],
+      ['T100 (2023)', [2023]],
+      ['T150', [2023]],
+      ['T200 (2023)', [2023]],
+      ['T350', [2023]],
+      ['T100S (2021)', [2021]],
+      ['T100 (2021)', [2021]],
+      ['T200 (2021)', [2021]],
+      ['T300 (2021)', [2021]],
+      ['T100 (2019)', [2019]],
+      ['T200 (2019)', [2019]],
+      ['AP1 718', [2018]],
+      ['AP2 718', [2018]],
+      ['AP3 718', [2018]],
+      ['MB 718', [2018]],
+      ['CB 718', [2018]],
+      ['AP2 716', [2016]],
+      ['AP1 716', [2016]],
+      ['AP2 714', [2014]],
+      ['AP1 714', [2014]],
+      ['MB 714', [2014]],
+      ['CB 714', [2014]],
+    ],
+    wedge: [
+      ['Vokey SM10', [2024]],
+      ['Vokey SM9', [2022]],
+      ['Vokey SM8', [2020]],
+      ['Vokey SM7', [2017]],
+      ['Vokey SM6', [2016]],
+    ],
+    putter: [
+      ['Scotty Cameron — see Scotty Cameron brand', []],
+    ]
+  },
+  wilson: {
+    irons: [
+      ['Staff Model Blade', [2022]],
+      ['Staff Model CB', [2022]],
+      ['D9', [2022]],
+    ],
+    driver: [
+      ['Staff Model', [2022]],
+      ['D9', [2022]],
+    ],
+    fairway: [['D9', [2022]]],
+    hybrid: [['D9', [2022]]],
+    wedge: [['Staff Model', [2022]]],
+    putter: []
+  },
+  xxio: {
+    driver: [
+      ['12', [2022]],
+      ['11', [2020]],
+      ['X', [2018]],
+    ],
+    fairway: [['12', [2022]],['11', [2020]]],
+    hybrid: [['12', [2022]],['11', [2020]]],
+    irons: [
+      ['12', [2022]],
+      ['11', [2020]],
+      ['X', [2018]],
+    ],
+    wedge: [],
+    putter: []
+  }
+};
+
+function updateModels() {
+  var brand = document.getElementById('selBrand').value;
+  var type = document.getElementById('selType').value;
+  var modelSel = document.getElementById('selModel');
+  var yearSel = document.getElementById('selYear');
+  modelSel.innerHTML = '<option value="">Select model…</option>';
+  yearSel.innerHTML = '<option value="">Select model first…</option>';
+  modelSel.disabled = true;
+  yearSel.disabled = true;
+  if (!brand || !type) { modelSel.innerHTML = '<option value="">Select brand & type first…</option>'; return; }
+  var models = (CLUBS[brand] && CLUBS[brand][type]) ? CLUBS[brand][type] : [];
+  if (models.length === 0) {
+    modelSel.innerHTML = '<option value="">No models listed for this combination</option>';
+    return;
+  }
+  models.forEach(function(m) {
+    var opt = document.createElement('option');
+    opt.value = m[0];
+    opt.textContent = m[0];
+    opt.dataset.years = JSON.stringify(m[1]);
+    modelSel.appendChild(opt);
+  });
+  modelSel.disabled = false;
+  modelSel.onchange = function() { updateYears(modelSel); };
+}
+
+function updateYears(modelSel) {
+  var yearSel = document.getElementById('selYear');
+  yearSel.innerHTML = '<option value="">Select year…</option>';
+  var selected = modelSel.options[modelSel.selectedIndex];
+  if (!selected || !selected.dataset.years) { yearSel.disabled = true; return; }
+  var years = JSON.parse(selected.dataset.years);
+  if (years.length === 0) { yearSel.innerHTML = '<option value="">Year N/A</option>'; yearSel.disabled = true; return; }
+  // Add the model year plus ±2 years for used market range
+  var allYears = new Set();
+  years.forEach(function(y) {
+    for (var i = y+2; i >= Math.max(y-1, 2010); i--) allYears.add(i);
+  });
+  Array.from(allYears).sort(function(a,b){return b-a}).forEach(function(y) {
+    var opt = document.createElement('option');
+    opt.value = y;
+    opt.textContent = y;
+    yearSel.appendChild(opt);
+  });
+  yearSel.disabled = false;
+}
+
+function sp(id) {
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nav-links a:not(.ncta)').forEach(function(a){a.classList.remove('active')});
+  var el=document.getElementById('nav-'+id);if(el)el.classList.add('active');
+  window.scrollTo(0,0);
+}
+function gsk(){window.open('https://skillest.com/@scottypro','_blank')}
+function sc(btn,val){
+  document.querySelectorAll('.cb').forEach(function(b){b.classList.remove('sel')});
+  btn.classList.add('sel');selCond=val;
+}
+function showLoading(msg){
+  document.getElementById('loadingState').classList.add('show');
+  document.getElementById('loadingMsg').textContent=msg||'Calculating your AU value range…';
+  document.getElementById('rc').classList.remove('show');
+  document.getElementById('calcBtn').disabled=true;
+}
+function hideLoading(){
+  document.getElementById('loadingState').classList.remove('show');
+  document.getElementById('calcBtn').disabled=false;
+}
+
+function toggleFallback(){
+  var on=document.getElementById('fallbackToggle').checked;
+  document.getElementById('fallbackPanel').classList.toggle('show',on);
+  // Grey out dropdowns visually when manual mode is active
+  ['selBrand','selType','selModel','selYear'].forEach(function(id){
+    document.getElementById(id).style.opacity=on?'0.45':'1';
+  });
+}
+
+async function doCalc(){
+  var cond=selCond;
+  var usingManual=document.getElementById('fallbackToggle').checked;
+  var manualDesc=document.getElementById('manualDesc').value.trim();
+  document.getElementById('errBox').classList.remove('show');
+
+  if(usingManual){
+    if(!manualDesc||!cond){
+      document.getElementById('errBox').textContent='Please describe your club and select a condition rating.';
+      document.getElementById('errBox').classList.add('show');return;
+    }
+  } else {
+    var brand=document.getElementById('selBrand').value;
+    var type=document.getElementById('selType').value;
+    var model=document.getElementById('selModel').value;
+    var year=document.getElementById('selYear').value;
+    if(!brand||!type||!model||!year||!cond){
+      document.getElementById('errBox').textContent='Please select a brand, type, model, year and condition before calculating.';
+      document.getElementById('errBox').classList.add('show');return;
+    }
+  }
+
+  // Gate check — 2 free, then require email
+  if(getValCount()>=2 && !isUnlocked()){
+    showGate();
+    return;
+  }
+
+  runValuation();
+}
+
+async function runValuation(){
+  if(isLoading)return;
+  isLoading=true;
+  incrementCount();
+  showLoading('Looking up PGA ValueGuide data and calculating AU range…');
+
+  var cond=selCond;
+  var usingManual=document.getElementById('fallbackToggle').checked;
+  var manualDesc=document.getElementById('manualDesc').value.trim();
+
+  var shaftType=document.getElementById('shaftType').value;
+  var gripType=document.getElementById('gripType').value;
+  var lengthMod=document.getElementById('lengthMod').value;
+  var otherMod=document.getElementById('otherMod').value;
+  var chkReceipt=document.getElementById('chkReceipt').checked;
+  var chkBox=document.getElementById('chkBox').checked;
+  var chkTools=document.getElementById('chkTools').checked;
+  var condNames=['Like new','Good','Average','Worn'];
+  var condName=condNames[cond-1];
+  var customDesc=[];
+  if(shaftType!=='stock')customDesc.push(shaftType);
+  if(gripType!=='original-good')customDesc.push(gripType);
+  if(lengthMod!=='standard')customDesc.push(lengthMod);
+  if(otherMod!=='none')customDesc.push(otherMod);
+  if(chkReceipt)customDesc.push('original receipt');
+  if(chkBox)customDesc.push('original box');
+  if(chkTools)customDesc.push('wrench/tools');
+
+  var fullClub, year;
+  if(usingManual){
+    fullClub=manualDesc;
+    year='not specified';
+  } else {
+    var brandNames={callaway:'Callaway',cleveland:'Cleveland',cobra:'Cobra',honma:'Honma',mizuno:'Mizuno',odyssey:'Odyssey',ping:'Ping',pxg:'PXG',scotty:'Scotty Cameron',srixon:'Srixon',taylormade:'TaylorMade',titleist:'Titleist',wilson:'Wilson Staff',xxio:'XXIO'};
+    var typeNames={driver:'Driver',fairway:'Fairway Wood',hybrid:'Hybrid/Utility',irons:'Iron Set',wedge:'Wedge',putter:'Putter'};
+    var brand=document.getElementById('selBrand').value;
+    var type=document.getElementById('selType').value;
+    var model=document.getElementById('selModel').value;
+    year=document.getElementById('selYear').value;
+    fullClub=brandNames[brand]+' '+model+' '+typeNames[type];
+  }
+
+  var prompt='You are an expert used golf club valuation assistant for the Australian market.\n\nClub: '+fullClub+'\nYear: '+year+'\nCondition: '+condName+'\nDexterity: '+(selDex==='LH'?'Left-handed':'Right-handed')+'\nCustomisations: '+(customDesc.length?customDesc.join(', '):'none')+'\n\nReturn ONLY a JSON object, no markdown, no explanation:\n{"pga_usd":0,"pga_aud":0,"golfbidder_gbp":0,"golfbidder_aud":0,"au_dealer_retail":0,"customisation_adj":0,"private_sale_low":0,"private_sale_high":0,"confidence":"medium","confidence_pct":65,"tags":[],"selling_note":"","model_notes":""}\n\nFill in realistic values using:\n- PGA ValueGuide RESALE price (not trade-in) in USD, converted x1.55 to AUD\n- Golfbidder UK retail in GBP, converted x1.95 to AUD  \n- AU dealer retail = what a reputable AU used dealer would retail this for\n- Apply 15-25% AU premium to international prices\n- private_sale = 85-90% of au_dealer_retail, adjusted for customisations and dexterity\n- Left-handed: apply 10-15% discount to private sale range\n- Be specific and realistic for the Australian market';
+
+  try {
+    var response=await fetch('/.netlify/functions/valuate',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({messages:[{role:'user',content:prompt}]})
+    });
+    var rawText=await response.text();
+    if(!rawText||rawText.trim()===''){
+      throw new Error('Empty response from server (status '+response.status+'). Check Netlify function logs.');
+    }
+    var data;
+    try{ data=JSON.parse(rawText); }
+    catch(pe){ throw new Error('Non-JSON response: '+rawText.slice(0,300)); }
+    if(data.error){throw new Error(JSON.stringify(data.error));}
+    var text=data.content&&data.content[0]&&data.content[0].text?data.content[0].text:'';
+    // Strip any markdown code fences and find the JSON object
+    text=text.replace(/```json|```/g,'').trim();
+    var jsonStart=text.indexOf('{');
+    var jsonEnd=text.lastIndexOf('}');
+    if(jsonStart===-1||jsonEnd===-1)throw new Error('No JSON in response');
+    text=text.slice(jsonStart,jsonEnd+1);
+    var r=JSON.parse(text);
+    renderResult(r,fullClub,year,condName);
+  } catch(e) {
+    hideLoading();
+    var msg = e.message || 'Unknown error';
+    document.getElementById('errBox').textContent='Error: '+msg+'. Please try again or use the manual description field.';
+    document.getElementById('errBox').classList.add('show');
+    console.error('Valuation error:',e);
+  }
+  isLoading=false;
+}
+
+var selSoldCond=0;
+
+function setSoldCond(btn,val){
+  document.querySelectorAll('#soldForm .cb').forEach(function(b){b.classList.remove('sel')});
+  btn.classList.add('sel');
+  selSoldCond=val;
+}
+
+function updateSoldModels(){
+  var brand=document.getElementById('soldBrand').value;
+  var type=document.getElementById('soldType').value;
+  var modelSel=document.getElementById('soldModel');
+  var yearSel=document.getElementById('soldYear');
+  modelSel.innerHTML='<option value="">Select model…</option>';
+  yearSel.innerHTML='<option value="">Select model first…</option>';
+  modelSel.disabled=true;yearSel.disabled=true;
+  if(!brand||!type||brand==='other'){modelSel.innerHTML='<option value="">Type club name in description above</option>';return;}
+  var models=(CLUBS[brand]&&CLUBS[brand][type])?CLUBS[brand][type]:[];
+  if(models.length===0){modelSel.innerHTML='<option value="">Not listed — use description above</option>';return;}
+  models.forEach(function(m){
+    var opt=document.createElement('option');
+    opt.value=m[0];opt.textContent=m[0];opt.dataset.years=JSON.stringify(m[1]);
+    modelSel.appendChild(opt);
+  });
+  modelSel.disabled=false;
+  modelSel.onchange=function(){updateSoldYears(modelSel);};
+}
+
+function updateSoldYears(modelSel){
+  var yearSel=document.getElementById('soldYear');
+  yearSel.innerHTML='<option value="">Select year…</option>';
+  var selected=modelSel.options[modelSel.selectedIndex];
+  if(!selected||!selected.dataset.years){yearSel.disabled=true;return;}
+  var years=JSON.parse(selected.dataset.years);
+  if(years.length===0){yearSel.innerHTML='<option value="">Year N/A</option>';yearSel.disabled=true;return;}
+  var allYears=new Set();
+  years.forEach(function(y){for(var i=y+2;i>=Math.max(y-1,2010);i--)allYears.add(i);});
+  Array.from(allYears).sort(function(a,b){return b-a}).forEach(function(y){
+    var opt=document.createElement('option');opt.value=y;opt.textContent=y;yearSel.appendChild(opt);
+  });
+  yearSel.disabled=false;
+}
+
+async function submitSoldPrice(){
+  var brand=document.getElementById('soldBrand').value;
+  var type=document.getElementById('soldType').value;
+  var model=document.getElementById('soldModel').value;
+  var year=document.getElementById('soldYear').value;
+  var desc=document.getElementById('soldDesc').value.trim();
+  var price=document.getElementById('soldPrice').value;
+  var platform=document.getElementById('soldPlatform').value;
+  var when=document.getElementById('soldWhen').value;
+  var dex=document.getElementById('soldDex').value;
+  var shaft=document.getElementById('soldShaft').value;
+  var notes=document.getElementById('soldNotes').value.trim();
+  var errEl=document.getElementById('soldErrBox');
+  errEl.classList.remove('show');
+  var clubDesc=desc;
+  if(!clubDesc&&model)clubDesc=brand+' '+model+(type?' ('+type+')':'');
+  if(!clubDesc&&brand)clubDesc=brand+(type?' '+type:'');
+  if(!clubDesc){errEl.textContent='Please select a club or describe it in the text field.';errEl.classList.add('show');return;}
+  if(!selSoldCond){errEl.textContent='Please select the condition when sold.';errEl.classList.add('show');return;}
+  if(!price||isNaN(price)||Number(price)<=0){errEl.textContent='Please enter the sold price in AU$.';errEl.classList.add('show');return;}
+  if(!platform){errEl.textContent='Please select where it was sold.';errEl.classList.add('show');return;}
+  if(!when){errEl.textContent='Please select approximately when it sold.';errEl.classList.add('show');return;}
+  var condNames=['Like new','Good','Average','Worn'];
+  var condName=condNames[selSoldCond-1];
+  document.getElementById('soldSubmitBtn').disabled=true;
+  document.getElementById('soldSubmitBtn').textContent='Submitting…';
+  try{
+    var formData=new URLSearchParams();
+    formData.append('form-name','yourgolf-soldprices');
+    formData.append('club',clubDesc+(year?' ('+year+')':''));
+    formData.append('year',year||'not specified');
+    formData.append('condition',condName);
+    formData.append('price','AU$'+price);
+    formData.append('platform',platform);
+    formData.append('when',when);
+    formData.append('dexterity',dex);
+    formData.append('shaft',shaft);
+    formData.append('notes',notes||'none');
+    formData.append('bot-field','');
+    await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:formData.toString()});
+  }catch(e){console.warn('Form submission failed:',e);}
+  document.getElementById('soldForm').style.display='none';
+  document.getElementById('soldSuccess').style.display='block';
+}
+
+function resetSoldForm(){
+  document.getElementById('soldForm').style.display='block';
+  document.getElementById('soldSuccess').style.display='none';
+  document.getElementById('soldSubmitBtn').disabled=false;
+  document.getElementById('soldSubmitBtn').textContent='Submit sold price →';
+  ['soldBrand','soldType','soldPlatform','soldWhen','soldDex'].forEach(function(id){document.getElementById(id).value='';});
+  document.getElementById('soldDex').value='RH';
+  document.getElementById('soldShaft').value='stock';
+  document.getElementById('soldModel').innerHTML='<option value="">Select brand & type first…</option>';
+  document.getElementById('soldModel').disabled=true;
+  document.getElementById('soldYear').innerHTML='<option value="">Select model first…</option>';
+  document.getElementById('soldYear').disabled=true;
+  document.getElementById('soldDesc').value='';
+  document.getElementById('soldPrice').value='';
+  document.getElementById('soldNotes').value='';
+  selSoldCond=0;
+  document.querySelectorAll('#soldForm .cb').forEach(function(b){b.classList.remove('sel')});
+}
+
+function renderCounter(){
+  var el=document.getElementById('freeCounter');
+  if(!el)return;
+  if(isUnlocked()){
+    el.innerHTML='<span style="color:var(--cyan);font-weight:600">✓ Unlimited valuations unlocked</span>';
+    return;
+  }
+  var used=getValCount();
+  var left=Math.max(0,2-used);
+  var pips='';
+  for(var i=0;i<2;i++){
+    pips+='<span style="width:8px;height:8px;border-radius:50%;background:'+(i<left?'var(--cyan)':'var(--border)')+';display:inline-block"></span>';
+  }
+  el.innerHTML=pips+'&nbsp;<span>'+left+' free valuation'+(left===1?'':'s')+' remaining</span>';
+}
+
+// Init on load
+window.addEventListener('DOMContentLoaded',function(){ renderCounter(); var h=(location.hash||'').replace('#',''); if(['tool','guide','sold','about'].indexOf(h)>-1){sp(h);} });
+
+function renderResult(r,fullClub,year,condName){
+  hideLoading();
+  var low=Math.round(r.private_sale_low/5)*5;
+  var high=Math.round(r.private_sale_high/5)*5;
+  if(high<=low)high=low+25;
+
+  // Trade-in range = 42–52% of private sale
+  var tiLow=Math.round(low*0.42/5)*5;
+  var tiHigh=Math.round(high*0.52/5)*5;
+
+  if(selVtype==='tradein'){
+    document.getElementById('rMode').textContent='Estimated AU$ trade-in / dealer offer';
+    document.getElementById('rFrom').textContent='$'+tiLow.toLocaleString();
+    document.getElementById('rTo').textContent='$'+tiHigh.toLocaleString();
+    document.getElementById('rSub').textContent=fullClub+' · '+condName+' · '+year+' · dealer offer estimate';
+    document.getElementById('tradeinBox').classList.remove('show');
+  } else {
+    document.getElementById('rMode').textContent='Estimated AU$ private sale range';
+    document.getElementById('rFrom').textContent='$'+low.toLocaleString();
+    document.getElementById('rTo').textContent='$'+high.toLocaleString();
+    document.getElementById('rSub').textContent=fullClub+' · '+condName+' · '+year;
+    // Show trade-in as secondary reference below private sale
+    document.getElementById('tiRange').textContent='$'+tiLow.toLocaleString()+' – $'+tiHigh.toLocaleString();
+    document.getElementById('tradeinBox').classList.add('show');
+  }
+
+  var steps=[];
+  if(r.pga_aud>0)steps.push('<span class="ms">PGA VG: $'+Math.round(r.pga_aud).toLocaleString()+' AU</span><span class="msep">·</span>');
+  if(r.golfbidder_aud>0)steps.push('<span class="ms">Golfbidder: $'+Math.round(r.golfbidder_aud).toLocaleString()+' AU</span><span class="msep">·</span>');
+  if(r.au_dealer_retail>0)steps.push('<span class="ms">AU dealer: $'+Math.round(r.au_dealer_retail).toLocaleString()+'</span><span class="msep">→</span>');
+  if(r.customisation_adj&&r.customisation_adj!==0)steps.push('<span class="ms">'+(r.customisation_adj>0?'+':'')+Math.round(r.customisation_adj)+' custom</span><span class="msep">→</span>');
+  steps.push('<span class="ms" style="color:var(--cyan-light);font-weight:700">$'+low.toLocaleString()+' – $'+high.toLocaleString()+'</span>');
+  document.getElementById('methodSteps').innerHTML=steps.join('');
+
+  var cp=r.confidence_pct||(r.confidence==='high'?78:r.confidence==='medium'?60:42);
+  document.getElementById('cFill').style.width=cp+'%';
+  document.getElementById('cLbl').textContent='Confidence: '+(r.confidence||'medium')+' ('+cp+'%)';
+
+  var tags=[];
+  tags.push({t:condName,cls:''});
+  tags.push({t:year,cls:''});
+  if(selDex==='LH')tags.push({t:'Left-handed — AU discount applied',cls:'neg'});
+  if(r.customisation_adj&&r.customisation_adj>100)tags.push({t:'Customisation adds value',cls:'pos'});
+  if(r.customisation_adj&&r.customisation_adj<-100)tags.push({t:'Customisation reduces value',cls:'neg'});
+  if(r.tags&&Array.isArray(r.tags))r.tags.forEach(function(t){tags.push({t:t,cls:''})});
+  document.getElementById('rTags').innerHTML=tags.map(function(t){return'<span class="tag'+(t.cls?' '+t.cls:'')+'">'+(t.t||t)+'</span>'}).join('');
+
+  var note='';
+  if(r.model_notes)note+=r.model_notes+' ';
+  if(selDex==='LH')note+='Left-handed clubs have a smaller buyer pool in Australia — expect a longer selling time and be prepared to accept slightly lower offers. Targeting left-handed golfer Facebook groups directly can help. ';
+  if(r.selling_note)note+=r.selling_note;
+  if(!note)note='List at the top of your range on Facebook Marketplace or Golf Clubs For Sale Australia. Always cross-check against live listings before finalising.';
+  document.getElementById('rNote').textContent=note;
+
+  var rc=document.getElementById('rc');
+  rc.classList.add('show');
+  renderCounter();
+  setTimeout(function(){rc.scrollIntoView({behavior:'smooth',block:'nearest'})},100);
+}
+</script>
+</body>
+</html>

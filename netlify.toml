@@ -9,3 +9,15 @@
   to = "https://yourgolf.com.au/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/coaching"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/coaching.html"
+  to = "/"
+  status = 301
+  force = true
