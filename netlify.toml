@@ -3,3 +3,8 @@
   to = "https://yourgolf.com.au/:splat"
   status = 301
   force = true
+[[redirects]]
+  from = "/book"
+  to = "https://skillest.com/@scottypro"
+  status = 302
+  force = true
