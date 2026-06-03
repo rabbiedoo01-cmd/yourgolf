@@ -132,24 +132,28 @@ footer a:hover{color:rgba(255,255,255,.75)}
 @media(max-width:700px){
   .hero-inner{grid-template-columns:1fr}
   .hero-card{display:none}
+  .hero-photo img{max-width:210px}
+  .hero-photo{margin:1.25rem auto 0}
   .facility-grid{grid-template-columns:1fr}
   .trust-bar{gap:1rem}
   .location-strip{gap:1rem}
   .nav-links{gap:.75rem}.nav-links a{font-size:.8rem}
 }
 .soon-badge{display:inline-block;background:var(--gold-pale);color:#7A5800;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:.2rem .55rem;border-radius:20px;margin-bottom:.55rem}
+.hero-photo{display:flex;align-items:flex-end;justify-content:center}
+.hero-photo img{display:block;width:100%;max-width:340px;height:auto;filter:drop-shadow(0 16px 34px rgba(0,0,0,.5))}
 </style>
 </head>
 <body>
 
 <nav class="nav">
-  <a class="nav-logo" href="/"><div class="nlm">YG</div><div class="nlt">Your<span>Golf</span></div></a>
+  <a class="nav-logo" href="/"><span class="nlm" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:#fff;border-radius:7px;padding:4px"><img src="/assets/ssg-mark.png" alt="Scott Spence Golf" style="height:100%;width:auto;display:block"></span><div class="nlt">Your<span>Golf</span></div></a>
   <div class="nav-links">
     <a href="#programmes">Programmes</a>
     <a href="#pricing">Pricing</a>
     <a href="/value-tool">Club value tool</a>
     <a href="https://instagram.com/yourgolfcoachscott" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-    <a href="https://skillest.com/@scottypro" target="_blank" class="ncta">Book a lesson ↗</a>
+    <a href="https://www.skillest.com/@scottypro/bookings" target="_blank" class="ncta">Book a lesson ↗</a>
   </div>
 </nav>
 
@@ -160,21 +164,11 @@ footer a:hover{color:rgba(255,255,255,.75)}
       <h1>Scott Spence Golf<br><em>Your Golf Coach</em></h1>
       <p class="sub">PGA Professional coaching on the Central Coast — individual lessons, group clinics, juniors, ladies and beginner programmes at one of Australia's Top 100 courses.</p>
       <div class="hero-ctas">
-        <a href="https://skillest.com/@scottypro" target="_blank" class="btn-primary">Book a lesson ↗</a>
+        <a href="https://www.skillest.com/@scottypro/bookings" target="_blank" class="btn-primary">Book a lesson ↗</a>
         <a href="#programmes" class="btn-outline">View programmes ↓</a>
       </div>
     </div>
-    <div class="hero-card">
-      <div class="hero-card-badge">SS</div>
-      <h3>Scott Spence</h3>
-      <div class="role">PGA Professional</div>
-      <div class="hero-card-stats">
-        <div class="hcs">Teaching Pro, Kooindah Waters</div>
-        <div class="hcs">All levels — juniors to scratch</div>
-        <div class="hcs">In-person and online via Skillest</div>
-        <div class="hcs">Central Coast, NSW</div>
-      </div>
-    </div>
+    <div class="hero-photo"><img src="/assets/scott-portrait.png" alt="Scott Spence — PGA Professional golf coach, Central Coast NSW"></div>
   </div>
 </div>
 
@@ -211,7 +205,7 @@ footer a:hover{color:rgba(255,255,255,.75)}
         </div>
         <div class="prog-price">$120</div>
         <div class="prog-price-note">Per session · packages available below</div>
-        <a href="https://skillest.com/@scottypro" target="_blank" class="book-btn cyan" style="margin-top:1rem">Book via Skillest ↗</a>
+        <a href="https://www.skillest.com/@scottypro/bookings" target="_blank" class="book-btn cyan" style="margin-top:1rem">Book via Skillest ↗</a>
       </div>
 
       <div class="prog-card">
@@ -226,7 +220,7 @@ footer a:hover{color:rgba(255,255,255,.75)}
         </div>
         <div class="prog-price">$180</div>
         <div class="prog-price-note">Includes green fees · per person</div>
-        <a href="https://skillest.com/@scottypro" target="_blank" class="book-btn" style="margin-top:1rem">Book via Skillest ↗</a>
+        <a href="https://www.skillest.com/@scottypro/bookings" target="_blank" class="book-btn" style="margin-top:1rem">Book via Skillest ↗</a>
       </div>
 
       <div class="prog-card">
@@ -241,7 +235,7 @@ footer a:hover{color:rgba(255,255,255,.75)}
         </div>
         <div class="prog-price">$75 <span style="font-size:.9rem;font-weight:400">pp</span></div>
         <div class="prog-price-note">Per person · minimum 6 to run</div>
-        <a href="https://skillest.com/@scottypro" target="_blank" class="book-btn" style="margin-top:1rem">Register interest ↗</a>
+        <a href="https://www.skillest.com/@scottypro/bookings" target="_blank" class="book-btn" style="margin-top:1rem">Register interest ↗</a>
       </div>
 
       <div class="prog-card">
@@ -256,7 +250,7 @@ footer a:hover{color:rgba(255,255,255,.75)}
         </div>
         <div class="prog-price">$50 <span style="font-size:.9rem;font-weight:400">pp</span></div>
         <div class="prog-price-note">Per session · 4-block $180 · 8-block term $320</div>
-        <a href="https://skillest.com/@scottypro" target="_blank" class="book-btn" style="margin-top:1rem">Register interest ↗</a>
+        <a href="https://www.skillest.com/@scottypro/bookings" target="_blank" class="book-btn" style="margin-top:1rem">Register interest ↗</a>
       </div>
 
       <div class="prog-card">
@@ -271,7 +265,7 @@ footer a:hover{color:rgba(255,255,255,.75)}
         </div>
         <div class="prog-price">$70 <span style="font-size:.9rem;font-weight:400">pp</span></div>
         <div class="prog-price-note">Per session · Wednesday mornings</div>
-        <a href="https://skillest.com/@scottypro" target="_blank" class="book-btn" style="margin-top:1rem">Register interest ↗</a>
+        <a href="https://www.skillest.com/@scottypro/bookings" target="_blank" class="book-btn" style="margin-top:1rem">Register interest ↗</a>
       </div>
 
       <div class="prog-card">
@@ -286,7 +280,7 @@ footer a:hover{color:rgba(255,255,255,.75)}
         </div>
         <div class="prog-price">$260</div>
         <div class="prog-price-note">Full 4-session programme · per person · green fee session 4 included</div>
-        <a href="https://skillest.com/@scottypro" target="_blank" class="book-btn" style="margin-top:1rem">Register interest ↗</a>
+        <a href="https://www.skillest.com/@scottypro/bookings" target="_blank" class="book-btn" style="margin-top:1rem">Register interest ↗</a>
       </div>
 
     </div>
@@ -394,7 +388,7 @@ footer a:hover{color:rgba(255,255,255,.75)}
 <div class="online-strip">
   <h2>Can't make it to Kooindah? Coach online.</h2>
   <p>Submit a video of your swing and receive detailed written feedback, specific drills and a practice plan — within 24 hours, wherever you are in Australia.</p>
-  <a href="https://skillest.com/@scottypro" target="_blank" class="skillest-btn">Book online coaching via Skillest ↗</a>
+  <a href="https://www.skillest.com/@scottypro/bookings" target="_blank" class="skillest-btn">Book online coaching via Skillest ↗</a>
 </div>
 
 <div class="section">
@@ -434,7 +428,7 @@ footer a:hover{color:rgba(255,255,255,.75)}
   <h2>Ready to improve your game?</h2>
   <p>Book a lesson with Scott Spence — PGA Professional and Teaching Pro at Kooindah Waters Golf Club, Central Coast NSW.</p>
   <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-    <a href="https://skillest.com/@scottypro" target="_blank" class="btn-primary">Book via Skillest ↗</a>
+    <a href="https://www.skillest.com/@scottypro/bookings" target="_blank" class="btn-primary">Book via Skillest ↗</a>
     <a href="/value-tool" class="btn-outline" style="color:#fff">Value your clubs →</a>
   </div>
   <p style="margin-top:1.5rem;font-size:.8rem;color:rgba(255,255,255,.35)">skillest.com/@scottypro</p>
@@ -446,11 +440,11 @@ footer a:hover{color:rgba(255,255,255,.75)}
 </div>
 
 <footer>
-  <span class="flogo">Scott Spence Golf</span>
+  <span style="display:inline-block;background:#fff;border-radius:8px;padding:9px 14px;margin-bottom:8px"><img src="/assets/ssg-logo.png" alt="Scott Spence Golf — Your Golf Coach" style="height:50px;width:auto;display:block"></span>
   <a href="/">Coaching</a> &nbsp;·&nbsp;
   <a href="/value-tool">Club valuation tool</a> &nbsp;·&nbsp;
   <a href="https://instagram.com/yourgolfcoachscott" target="_blank" rel="noopener">Instagram ↗</a> &nbsp;·&nbsp;
-  <a href="https://skillest.com/@scottypro" target="_blank">Book on Skillest ↗</a>
+  <a href="https://www.skillest.com/@scottypro/bookings" target="_blank">Book on Skillest ↗</a>
   <br>Kooindah Waters Golf Club · Wyong NSW · PGA Professional Scott Spence
 </footer>
 

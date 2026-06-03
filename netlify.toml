@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/book"
-  to = "https://skillest.com/@scottypro/bookings"
+  to = "https://www.skillest.com/@scottypro/bookings"
   status = 302
   force = true
 
