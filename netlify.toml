@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/book"
-  to = "https://www.skillest.com/@scottypro/bookings"
+  to = "https://app.coachnow.io/facility/41591f3f089a80f6beffd3bb51/coach/scott-spence/dc4d13bf84fb71906d1ec0619d507865"
   status = 302
   force = true
 
@@ -19,5 +19,97 @@
 [[redirects]]
   from = "/coaching.html"
   to = "/"
+  status = 301
+  force = true
+
+# Retired equipment price pages -> value tool
+
+[[redirects]]
+  from = "/callaway-paradym-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mizuno-jpx923-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ping-blueprint-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ping-g425-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ping-g430-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ping-i230-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/scotty-cameron-newport-2-putter-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/taylormade-p790-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/taylormade-stealth-2-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/taylormade-stealth-driver-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/taylormade-stealth-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/titleist-ap2-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/titleist-t100-irons-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/titleist-vokey-sm8-wedge-price-australia"
+  to = "/value-tool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/titleist-vokey-sm9-wedge-price-australia"
+  to = "/value-tool"
   status = 301
   force = true
